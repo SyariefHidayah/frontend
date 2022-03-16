@@ -476,27 +476,20 @@ License: For each use you must have a valid license purchased only from above li
 											<div class="card-body">
 												<div class="d-flex flex-wrap gap-5 mb-5">
 													<!--begin::Input group-->
-													<div class="fv-row w-100 flex-md-root">
+													<div class="row">
 														<!--begin::Label-->
-														<label class="d-flex align-items-center fs-6 fw-bold mb-2">
+														<label class="fs-6 fw-bold mb-2">
 															<span class="required">Import File Excel(.xls) RUP</span>
 														</label>
 														<!--end::Label-->
 														<!--begin::Input-->
-														<table width="50%">
-															<tr>
-																<td><input type="file" id="excelfile" required
-																		name="excelfile" class="btn btn-light"></td>
-																<td><input type="submit" id="import" value="IMPORT"
-																		name="IMPORT"
-																		class="btn btn-warning btn-hover-rise"></td>
-																<td><a href="downloadgetfile.php?file=databarang.xls">
-																		<input type="button" id="import"
-																			value="DOWNLOAD" name="Download"
-																			class="btn btn-success btn-hover-rise" />
-																	</a></td>
-															</tr>
-														</table>
+														<div class="col-12 col-md-7 col-sm-12"><input type="file"
+																id="excelfile" required name="excelfile"
+																class="form-control form-control-solid"></div>
+														<div class="col-12 col-md-5 col-sm-12"><input type="submit"
+																id="import" value="IMPORT" name="IMPORT"
+																class="btn btn-warning btn-hover-rise">
+														</div>
 														<!--end::Input-->
 													</div>
 													<!--end::Input group-->
