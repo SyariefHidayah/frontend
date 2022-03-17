@@ -502,12 +502,21 @@ License: For each use you must have a valid license purchased only from above li
 														<!--end::Input-->
 													</div>
 												</div>
+												<div class="d-flex flex-column mb-8 fv-row">
+													<!--begin::Label-->
+													<label class="d-flex align-items-center fs-6 fw-bold mb-2">
+														<span class="required">Nama Paket</span>
+													</label>
+													<!--end::Label-->
+													<input type="text" class="form-control form-control-solid"
+														placeholder="Masukan Nama Paket" name="nama_paket" required />
+												</div>
 												<div class="d-flex flex-wrap gap-5 mb-5">
 													<!--begin::Input group-->
 													<div class="fv-row w-100 flex-md-root">
 														<!--begin::Label-->
 														<label class="d-flex align-items-center fs-6 fw-bold mb-2">
-															<span class="required">Nama Satker</span>
+															<span class="required">Nama Satuan Kerja</span>
 														</label>
 														<!--end::Label-->
 														<!--begin::Input-->
@@ -537,7 +546,7 @@ License: For each use you must have a valid license purchased only from above li
 													<div class="fv-row w-100 flex-md-root">
 														<!--begin::Label-->
 														<label class="d-flex align-items-center fs-6 fw-bold mb-2">
-															<span class="required">Jenis Kegiatan</span>
+															<span class="required">Jenis Pengadaan</span>
 														</label>
 														<!--end::Label-->
 														<!--begin::Input-->
@@ -545,17 +554,32 @@ License: For each use you must have a valid license purchased only from above li
 															data-control="select" data-hide-search="true"
 															data-placeholder="Pilih Kategori Permasalahan"
 															name="jenis_kegatan" required>
-															<option value="">Select a product...</option>
-															<option value="1">Pembangunan Gedung</option>
-															<option value="2">Pengadaan Jasa</option>
-															<option value="3">Pengadaan Rumah dinas</option>
+															<option value="">Pilih Jenis Pengadaan</option>
+															<option value="1">Pekerjaan Konstruksi</option>
+															<option value="2">Barang</option>
+															<option value="3">Jasa Konsultansi</option>
+															<option value="3">Jasa Lainnya</option>
 														</select>
 														<!--end::Input-->
 													</div>
 													<!--end::Input group-->
 													<!--begin::Input group-->
 													<div class="fv-row w-100 flex-md-root">
-
+														<!--begin::Label-->
+														<label class="d-flex align-items-center fs-6 fw-bold mb-2">
+															<span class="required">Metode Pengadaan</span>
+														</label>
+														<!--end::Label-->
+														<!--begin::Input-->
+														<select class="form-select form-select-solid"
+															data-control="select" data-hide-search="true"
+															data-placeholder="Pilih Kategori Permasalahan"
+															name="jenis_kegatan" required>
+															<option value="">Pilih Metode Pengadaan </option>
+															<option value="1">Pangadaan Langsung</option>
+															<option value="2">Tender</option>
+														</select>
+														<!--end::Input-->
 													</div>
 												</div>
 											</div>
@@ -567,8 +591,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="row">
 										<div class="d-grid gap-2 d-md-block text-center">
 											<button type="reset" href="#"
-												class="btn btn-warning btn-hover-rise bg-secondary"><i
-													class="bi bi-x"></i>
+												class="btn btn-warning btn-hover-rise bg-dark"><i class="bi bi-x"></i>
 												Batal</button>
 											<button type="submit" href="#"
 												class="btn btn-success btn-hover-rise bg-dark"><i
