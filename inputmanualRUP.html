@@ -550,15 +550,18 @@ License: For each use you must have a valid license purchased only from above li
 														</label>
 														<!--end::Label-->
 														<!--begin::Input-->
+
 														<select class="form-select form-select-solid"
-															data-control="select" data-hide-search="true"
-															data-placeholder="Pilih Kategori Permasalahan"
-															name="jenis_kegatan" required>
-															<option value="">Pilih Jenis Pengadaan</option>
-															<option value="1">Pekerjaan Konstruksi</option>
-															<option value="2">Barang</option>
-															<option value="3">Jasa Konsultansi</option>
-															<option value="3">Jasa Lainnya</option>
+															name="jenis_kegiatan" required>
+															<optgroup label="Pilih Jenis Pengadaan">
+																<option value="Pekerjaan Konstruksi">Pekerjaan
+																	Konstruksi
+																</option>
+																<option value="Barang">Barang</option>
+																<option value="Jasa Konsultansi">Jasa Konsultansi
+																</option>
+																<option value="Jasa Lainnya">Jasa Lainnya</option>
+															</optgroup>
 														</select>
 														<!--end::Input-->
 													</div>
@@ -572,12 +575,12 @@ License: For each use you must have a valid license purchased only from above li
 														<!--end::Label-->
 														<!--begin::Input-->
 														<select class="form-select form-select-solid"
-															data-control="select" data-hide-search="true"
-															data-placeholder="Pilih Kategori Permasalahan"
-															name="jenis_kegatan" required>
-															<option value="">Pilih Metode Pengadaan </option>
-															<option value="1">Pangadaan Langsung</option>
-															<option value="2">Tender</option>
+															name="metode_pengadaan" required>
+															<optgroup label="Pilih Metode Pengadaan">
+																<option value="Pengadaan Langsung">Pengadaan Langsung
+																</option>
+																<option value="Tender">Tender</option>
+															</optgroup>
 														</select>
 														<!--end::Input-->
 													</div>
