@@ -591,7 +591,7 @@ License: For each use you must have a valid license purchased only from above li
 												<div class="card-title text-light">Input Ketua Dan Kelompok Kerja</div>
 											</div>
 											<div class="card-body">
-												<div>
+												<div class="pokemon">
 													<div>
 														<h3 class="text-active-dark">Ketua Kelompok Kerja</h3>
 													</div>
@@ -605,8 +605,17 @@ License: For each use you must have a valid license purchased only from above li
 															</label>
 															<!--end::Label-->
 															<!--begin::Input-->
-															<input type="text" class="form-control form-control-solid"
-																placeholder="Masukan NIP" name="nip" required />
+															<div class="input-group mb-5"><input type="text"
+																	class="form-control form-control-solid"
+																	placeholder="Masukan NIP" name="nip" id="myInput"
+																	required />
+																<span><button id="btn" onclick="testFunc()"
+																		class="btn btn-primary bg-dark"
+																		style="border-radius: 0px 5px 5px 0px;"><i
+																			class="bi bi-cloud-check fs-4"></i> Cek
+																		NIP</button></span>
+															</div>
+
 															<!--end::Input-->
 														</div>
 														<!--end::Input group-->
@@ -619,7 +628,8 @@ License: For each use you must have a valid license purchased only from above li
 															<!--end::Label-->
 															<!--begin::Input-->
 															<input type="text" class="form-control form-control-solid"
-																placeholder="Masukan Nama" name="nama_ketua" required />
+																placeholder="Masukan Nama" id="nama_ketua"
+																name="nama_ketua" required />
 															<!--end::Input-->
 														</div>
 													</div>
@@ -634,7 +644,7 @@ License: For each use you must have a valid license purchased only from above li
 															<!--begin::Input-->
 															<input type="text" class="form-control form-control-solid"
 																placeholder="Masukan Satuan Kerja" name="satuan_kerja"
-																required />
+																id="satuankerjaketua" required />
 															<!--end::Input-->
 														</div>
 														<!--end::Input group-->
@@ -647,7 +657,8 @@ License: For each use you must have a valid license purchased only from above li
 															<!--end::Label-->
 															<!--begin::Input-->
 															<input type="text" class="form-control form-control-solid"
-																placeholder="Masukan Jabatan" name="jabatan" required />
+																placeholder="Masukan Jabatan" name="jabatan"
+																id="jabatanketua" required />
 															<!--end::Input-->
 														</div>
 													</div>
@@ -1067,6 +1078,34 @@ License: For each use you must have a valid license purchased only from above li
 				]
 			});
 		});
+	</script>
+	<script>
+		const btn = document.getElementById("btn");
+		const input = document.getElementById("myInput");
+
+		const testFunc = function () {
+			let inputValue = input.value;
+			var url = "https://sikep.mahkamahagung.go.id/api-pro/v1/training/pegawai/" + input.value;
+
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", url);
+
+			xhr.setRequestHeader("Authorization", "Bearer uW7FYKGePxUBPb5jgtLCsTC3efKwNfl2HV1UdTxz");
+
+			xhr.onreadystatechange = function () {
+				if (xhr.readyState === 4) {
+					//console.log(xhr.status);
+					//console.log(xhr.responseText);
+					let sikep = JSON.parse(xhr.responseText);
+					console.log(sikep.data);
+					document.getElementById("nama_ketua").value = sikep.data.gelar_depan + " " + sikep.data.nama_lengkap + ", " + sikep.data.gelar_belakang;
+					document.getElementById("satuankerjaketua").value = sikep.data.satker;
+					document.getElementById("jabatanketua").value = sikep.data.jabatan;
+				}
+			};
+
+			xhr.send();
+		}
 	</script>
 
 	<!--end::Page Custom Javascript-->
