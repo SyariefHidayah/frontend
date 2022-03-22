@@ -496,9 +496,10 @@ License: For each use you must have a valid license purchased only from above li
 														</label>
 														<!--end::Label-->
 														<!--begin::Input-->
-														<input type="text" class="form-control form-control-solid"
-															placeholder="Masukan Tahun Anggaran" name="tahun_anggaran"
-															required />
+														<select type="select" class="form-select form-select-solid"
+															placeholder="Pilih Tahun Anggaran" name="tahun_anggaran"
+															id="dropdownYear" required>
+														</select>
 														<!--end::Input-->
 													</div>
 												</div>
@@ -556,15 +557,14 @@ License: For each use you must have a valid license purchased only from above li
 
 														<select class="form-select form-select-solid"
 															name="jenis_kegiatan" required>
-															<optgroup label="Pilih Jenis Pengadaan">
-																<option value="Pekerjaan Konstruksi">Pekerjaan
-																	Konstruksi
-																</option>
-																<option value="Barang">Barang</option>
-																<option value="Jasa Konsultansi">Jasa Konsultansi
-																</option>
-																<option value="Jasa Lainnya">Jasa Lainnya</option>
-															</optgroup>
+															<option hidden value="">Pilih Jenis Pengadaan</option>
+															<option value="Pekerjaan Konstruksi">Pekerjaan
+																Konstruksi
+															</option>
+															<option value="Barang">Barang</option>
+															<option value="Jasa Konsultansi">Jasa Konsultansi
+															</option>
+															<option value="Jasa Lainnya">Jasa Lainnya</option>
 														</select>
 														<!--end::Input-->
 													</div>
@@ -579,12 +579,15 @@ License: For each use you must have a valid license purchased only from above li
 														<!--begin::Input-->
 														<select class="form-select form-select-solid"
 															name="metode_pengadaan" required>
-															<optgroup label="Pilih Metode Pengadaan">
-																<option value="Pengadaan Langsung">Pengadaan Langsung
-																</option>
-																<option value="Tender">Tender</option>
-															</optgroup>
+															<option hidden value="">Pilih Metode
+																Pengadaan
+															</option>
+															<option value="Pengadaan Langsung">Pengadaan Langsung
+															</option>
+															<option value="Tender">Tender</option>
+
 														</select>
+
 														<!--end::Input-->
 													</div>
 												</div>
@@ -710,7 +713,23 @@ License: For each use you must have a valid license purchased only from above li
 		}
 	</script>
 	<!--end::Page Custom Javascript-->
+
 	<!--end::Javascript-->
+	<script>
+		let select = document.getElementById('dropdownYear');
+		let currYear = new Date().getFullYear();
+		let futureYear = currYear + 3;
+		let pastYear = currYear - 3;
+		for (let year = pastYear; year <= futureYear; year++) {
+			let option = document.createElement('option');
+			option.setAttribute('value', year);
+			if (year === currYear) {
+				option.setAttribute('selected', true);
+			}
+			option.innerHTML = year;
+			select.appendChild(option);
+		}
+	</script>
 </body>
 <!--end::Body-->
 
