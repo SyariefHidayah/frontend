@@ -701,17 +701,72 @@ License: For each use you must have a valid license purchased only from above li
 								</div>
 								<!--end::row-->
 								<!--begin::row-->
-								<div class="row text-center">
-									<div class="col">
-										<button type="button"
-											class="btn btn-secondary btn-lg btn-hover-rise">Kembali</button>
-										<button type="button" class="btn btn-warning btn-lg btn-hover-rise"
-											style="margin: 10px;">Edit</button>
-										<button type="button"
-											class="btn btn-success btn-lg btn-hover-rise">Verifikasi</button>
+								<div class="row">
+									<div class="d-grid gap-2 d-md-block text-center">
+										<button class="btn btn-warning btn-hover-rise bg-dark"><i
+												class="bi bi-skip-backward"></i>Kembali</button>
+										<button class="btn btn-warning btn-hover-rise bg-dark" style="margin: 10px;"><i
+												class="bi bi-pencil-square"></i>Ubah Usulan Pokja</button>
+										<button class="btn btn-success  btn-hover-rise bg-dark"><i
+												class="bi bi-patch-check"></i>Verifikasi</button>
 									</div>
 								</div>
 								<!--end::row-->
+								<form class="form" action="/" method="get">
+									<div class="row">
+										<div class="card shadow-sm px-0 mb-6 mb-xl-4">
+											<div class="card-header ribbon ribbon-top ribbon-vertical rounded-top-2"
+												style="background-color: darkred;">
+												<div class="ribbon-label bg-dark">
+													<i class="bi bi-pencil fs-2 text-light"></i>
+												</div>
+												<div class="card-title text-light">Verifikasi Usulan Pokja dan Paket
+													Pengadaan</div>
+											</div>
+											<div class="card-body">
+												<div class="d-flex flex-wrap gap-5 mb-5">
+													<!--begin::Input group-->
+													<div class="fv-row w-100 flex-md-root">
+														<!--begin::Label-->
+														<label class="d-flex align-items-center fs-6 fw-bold mb-2">
+															<span class="required">No Surat Usulan </span>
+														</label>
+														<!--end::Label-->
+														<!--begin::Input-->
+														<input type="text" class="form-control form-control-solid"
+															placeholder="Masukan No Surat Usulan" name="no_surat_usulan"
+															required />
+														<!--end::Input-->
+													</div>
+													<!--end::Input group-->
+													<!--begin::Input group-->
+													<div class="fv-row w-100 flex-md-root">
+														<!--begin::Label-->
+														<label class="d-flex align-items-center fs-6 fw-bold mb-2">
+															<span class="required">Tanggal Surat Keputusan</span>
+														</label>
+														<!--end::Label-->
+														<!--begin::Input-->
+														<input class="form-control form-control-solid"
+															placeholder="Pilih Tanggal" id="kt_datepicker_2" />
+														<!--end::Input-->
+													</div>
+												</div>
+												<div class="row">
+													<div class="d-grid gap-2 d-md-block text-center">
+														<a href="#" class="btn btn-warning btn-hover-rise bg-dark"><i
+																class="bi bi-x"></i>
+															Batal</a>
+														<a href="#" class="btn btn-success btn-hover-rise bg-dark"><i
+																class="bi bi-save2"></i>
+															Simpan</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!--end::row-->
+									</div>
+								</form>
 							</div>
 							<!--end::Container-->
 						</div>
@@ -798,6 +853,13 @@ License: For each use you must have a valid license purchased only from above li
 					'print'
 				]
 			});
+		});
+	</script>
+	<script>
+		$("#kt_datepicker_2").flatpickr({
+			altInput: true,
+			altFormat: "j F Y",
+			dateFormat: "Y-m-d",
 		});
 	</script>
 	<!--end::Page Custom Javascript-->
