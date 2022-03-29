@@ -496,9 +496,10 @@ License: For each use you must have a valid license purchased only from above li
 														</label>
 														<!--end::Label-->
 														<!--begin::Input-->
-														<input type="text" class="form-control form-control-solid"
-															placeholder="Masukan Tahun Anggaran" name="tahun_anggaran"
-															required />
+														<select type="select" class="form-select form-select-solid"
+															placeholder="Pilih Tahun Anggaran" name="tahun_anggaran"
+															id="dropdownYear" required>
+														</select>
 														<!--end::Input-->
 													</div>
 												</div>
@@ -533,11 +534,14 @@ License: For each use you must have a valid license purchased only from above li
 															<span class="required">Nilai Pagu</span>
 														</label>
 														<!--end::Label-->
-														<!--begin::Input-->
-														<input type="text" class="form-control form-control-solid"
-															placeholder="Masukan Nilai Pagu" name="nilai_pagu"
-															required />
-														<!--end::Input-->
+														<div class="input-group">
+															<span class="input-group-text">Rp.</span>
+															<input type="text" id="tanpa-rupiah"
+																class="form-control form-control-solid"
+																placeholder="Masukan Nilai Pagu" name="nilai_pagu"
+																required />
+															<!--end::Input-->
+														</div>
 													</div>
 												</div>
 												<div class="d-flex flex-wrap gap-5 mb-5">
@@ -1034,6 +1038,887 @@ License: For each use you must have a valid license purchased only from above li
 							</form>
 						</div>
 
+						<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+							<!--begin::Container-->
+							<form id="kt_modal_new_ticket_form" class="form" action="save" method="POST"
+								enctype="multipart/form-data">
+								<div id="kt_content_container">
+									<div class="row">
+										<div class="card shadow-sm px-0 mb-6 mb-xl-4">
+											<div class="card-header ribbon ribbon-top ribbon-vertical rounded-top-2"
+												style="background-color: darkred;">
+												<div class="ribbon-label bg-dark">
+													<i class="bi bi-pencil fs-2 text-light"></i>
+												</div>
+												<div class="card-title text-light">INPUT PAKET PENGADAAN</div>
+											</div>
+											<div class="card-body">
+												<div class="d-flex flex-wrap gap-5 mb-5">
+													<!--begin::Input group-->
+													<div class="fv-row w-100 flex-md-root">
+														<!--begin::Label-->
+														<label class="d-flex align-items-center fs-6 fw-bold mb-2">
+															<span class="required">Kode RUP</span>
+														</label>
+														<!--end::Label-->
+														<!--begin::Input-->
+														<input type="hidden" class="form-control form-control-solid"
+															name="kode_satker" value="<?= user()->kode_satker ?>" />
+														<input type="hidden" class="form-control form-control-solid"
+															name="kode_satker_parent"
+															value="<?= user()->kode_satker_parent ?>" />
+														<input type="text" class="form-control form-control-solid"
+															placeholder="Masukan Kode RUP" name="kode_rup" required />
+														<!--end::Input-->
+													</div>
+													<!--end::Input group-->
+													<!--begin::Input group-->
+													<div class="fv-row w-100 flex-md-root">
+														<!--begin::Label-->
+														<label class="d-flex align-items-center fs-6 fw-bold mb-2">
+															<span class="required">Tahun Anggaran</span>
+														</label>
+														<!--end::Label-->
+														<!--begin::Input-->
+														<input type="text" class="form-control form-control-solid"
+															placeholder="Masukan Tahun Anggaran" name="tahun_anggaran"
+															required />
+														<!--end::Input-->
+													</div>
+												</div>
+												<div class="d-flex flex-column mb-8 fv-row">
+													<!--begin::Label-->
+													<label class="d-flex align-items-center fs-6 fw-bold mb-2">
+														<span class="required">Nama Paket</span>
+													</label>
+													<!--end::Label-->
+													<input type="text" class="form-control form-control-solid"
+														placeholder="Masukan Nama Paket" name="nama_paket" required />
+												</div>
+												<div class="d-flex flex-wrap gap-5 mb-5">
+													<!--begin::Input group-->
+													<div class="fv-row w-100 flex-md-root">
+														<!--begin::Label-->
+														<label class="d-flex align-items-center fs-6 fw-bold mb-2">
+															<span class="required">Nama Satuan Kerja</span>
+														</label>
+														<!--end::Label-->
+														<!--begin::Input-->
+														<input type="text" class="form-control form-control-solid"
+															placeholder="Masukan Nama Satuan Kerja" name="satuan_kerja"
+															required />
+														<!--end::Input-->
+													</div>
+													<!--end::Input group-->
+													<!--begin::Input group-->
+													<div class="fv-row w-100 flex-md-root">
+														<!--begin::Label-->
+														<label class="d-flex align-items-center fs-6 fw-bold mb-2">
+															<span class="required">Nilai Pagu</span>
+														</label>
+														<!--end::Label-->
+														<!--begin::Input-->
+														<input type="text" class="form-control form-control-solid"
+															placeholder="Masukan Nilai Pagu" name="nilai_pagu"
+															required />
+														<!--end::Input-->
+													</div>
+												</div>
+												<div class="d-flex flex-wrap gap-5 mb-5">
+													<!--begin::Input group-->
+													<div class="fv-row w-100 flex-md-root">
+														<!--begin::Label-->
+														<label class="d-flex align-items-center fs-6 fw-bold mb-2">
+															<span class="required">Nomor Surat Usulan</span>
+														</label>
+														<!--end::Label-->
+														<!--begin::Input-->
+														<input type="text" class="form-control form-control-solid"
+															placeholder="Masukan Nomor Surat Usulan"
+															name="no_surat_usulan" required />
+														<!--end::Input-->
+													</div>
+													<!--end::Input group-->
+													<!--begin::Input group-->
+													<div class="fv-row w-100 flex-md-root">
+														<!--begin::Label-->
+														<label class="d-flex align-items-center fs-6 fw-bold mb-2">
+															<span class="required">Penandatangan</span>
+														</label>
+														<!--end::Label-->
+														<!--begin::Input-->
+														<input type="text" class="form-control form-control-solid"
+															placeholder="Masukan Penandatangan Usulan"
+															name="penandatangan" required />
+														<!--end::Input-->
+													</div>
+												</div>
+												<!--begin::Input group-->
+												<div class="mb-3">
+													<label for="formFile" class="form-label">Upload Surat Usulan</label>
+													<input class="form-control" type="file" id="formFile"
+														name="surat_usulan" accept="application/pdf">
+												</div>
+												<!--end::Input group-->
+											</div>
+										</div>
+										<!--end::row-->
+									</div>
+									<!--end::row-->
+									<!--begin::row-->
+									<div id="kt_ecommerce_add_category_conditions" class="row py-6">
+										<div class="card shadow-sm px-0 mb-6 mb-xl-4">
+											<div class="card-header ribbon ribbon-top ribbon-vertical rounded-top-2"
+												style="background-color: darkred;">
+												<div class="ribbon-label bg-dark">
+													<i class="bi bi-pencil fs-2 text-light"></i>
+												</div>
+												<div class="card-title text-light">INPUT KETUA DAN ANGGOTA KELOMPOK
+													KERJA</div>
+											</div>
+											<div class="card-body">
+												<div class="row">
+													<div>
+														<h3 class="text-active-dark">Ketua Kelompok Kerja</h3>
+														<div class="separator separator-dashed border-dark my-3"></div>
+													</div>
+													<div class="d-flex flex-wrap gap-5 mb-5">
+														<!--begin::Input group-->
+														<div class="fv-row w-100 flex-md-root">
+															<!--begin::Label-->
+															<label class="d-flex align-items-center fs-6 fw-bold mb-2">
+																<span class="required">NIP</span>
+															</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+
+															<div class="input-group">
+																<input type="text"
+																	class="form-control form-control-solid"
+																	placeholder="Masukan NIP" name="anggota[100][nip]"
+																	required />
+																<span>
+																	<a name="anggota[100][nip]" onclick="sikep(this)"
+																		class="btn btn-primary bg-dark"
+																		style="border-radius: 0px 5px 5px 0px;"><i
+																			class="bi bi-cloud-check fs-4"></i> Cek
+																		NIP</a>
+																</span>
+															</div>
+															<!--end::Input-->
+														</div>
+														<!--end::Input group-->
+														<!--begin::Input group-->
+														<div class="fv-row w-100 flex-md-root">
+															<!--begin::Label-->
+															<label class="d-flex align-items-center fs-6 fw-bold mb-2">
+																<span class="required">Nama </span>
+															</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<input type="text" class="form-control form-control-solid"
+																placeholder="Masukan Nama" name="anggota[100][nama]"
+																required />
+															<!--end::Input-->
+														</div>
+													</div>
+													<div class="d-flex flex-wrap gap-5 mb-5">
+														<!--begin::Input group-->
+														<div class="fv-row w-100 flex-md-root">
+															<!--begin::Label-->
+															<label class="d-flex align-items-center fs-6 fw-bold mb-2">
+																<span class="required">Satuan Kerja</span>
+															</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<input type="text" class="form-control form-control-solid"
+																placeholder="Masukan Satuan Kerja"
+																name="anggota[100][satuan_kerja]" required />
+															<!--end::Input-->
+														</div>
+														<!--end::Input group-->
+														<!--begin::Input group-->
+														<div class="fv-row w-100 flex-md-root">
+															<!--begin::Label-->
+															<label class="d-flex align-items-center fs-6 fw-bold mb-2">
+																<span class="required">Jabatan</span>
+															</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<input type="text" class="form-control form-control-solid"
+																placeholder="Masukan Jabatan"
+																name="anggota[100][jabatan]" required />
+															<input type="hidden" name="anggota[100][posisi]"
+																value="Ketua" />
+															<!--end::Input-->
+														</div>
+													</div>
+													<!--begin::Input group-->
+													<div class="mb-3">
+														<label for="formFile" class="form-label">Upload Sertifikat
+															Pengadaan
+															Barang
+															dan Jasa</label>
+														<input class="form-control" type="file" id="formFile"
+															name="anggota[100][sertifikat_pbj]"
+															accept="application/pdf">
+													</div>
+												</div>
+												<div class="separator border-dark my-10"></div>
+												<div class="row">
+													<div>
+														<h3 class="text-active-dark">Anggota Kelompok Kerja</h3>
+														<div class="separator separator-dashed border-dark my-3"></div>
+													</div>
+
+													<div class="d-flex flex-wrap gap-5 mb-5">
+														<!--begin::Input group-->
+														<div class="fv-row w-100 flex-md-root">
+															<!--begin::Label-->
+															<label class="d-flex align-items-center fs-6 fw-bold mb-2">
+																<span class="required">NIP</span>
+															</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+
+															<div class="input-group">
+																<input type="text"
+																	class="form-control form-control-solid"
+																	placeholder="Masukan NIP" name="anggota[500][nip]"
+																	required />
+																<span>
+																	<a name="anggota[500][nip]" onclick="sikep(this)"
+																		class="btn btn-primary bg-dark"
+																		style="border-radius: 0px 5px 5px 0px;"><i
+																			class="bi bi-cloud-check fs-4"></i> Cek
+																		NIP</a>
+																</span>
+															</div>
+															<!--end::Input-->
+														</div>
+														<!--end::Input group-->
+														<!--begin::Input group-->
+														<div class="fv-row w-100 flex-md-root">
+															<!--begin::Label-->
+															<label class="d-flex align-items-center fs-6 fw-bold mb-2">
+																<span class="required">Nama </span>
+															</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<input type="text" class="form-control form-control-solid"
+																placeholder="Masukan Nama" name="anggota[500][nama]"
+																required />
+															<!--end::Input-->
+														</div>
+													</div>
+													<div class="d-flex flex-wrap gap-5 mb-5">
+														<!--begin::Input group-->
+														<div class="fv-row w-100 flex-md-root">
+															<!--begin::Label-->
+															<label class="d-flex align-items-center fs-6 fw-bold mb-2">
+																<span class="required">Satuan Kerja</span>
+															</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<input type="text" class="form-control form-control-solid"
+																placeholder="Masukan Satuan Kerja"
+																name="anggota[500][satuan_kerja]" required />
+															<!--end::Input-->
+														</div>
+														<!--end::Input group-->
+														<!--begin::Input group-->
+														<div class="fv-row w-100 flex-md-root">
+															<!--begin::Label-->
+															<label class="d-flex align-items-center fs-6 fw-bold mb-2">
+																<span class="required">Jabatan</span>
+															</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<input type="text" class="form-control form-control-solid"
+																placeholder="Masukan Jabatan"
+																name="anggota[500][jabatan]" required />
+															<input type="hidden" name="anggota[500][posisi]"
+																value="Anggota" />
+															<!--end::Input-->
+														</div>
+													</div>
+													<!--begin::Input group-->
+													<div class="mb-3">
+														<label for="formFile" class="form-label">Upload Sertifikat
+															Pengadaan
+															Barang
+															dan Jasa</label>
+														<input class="form-control" type="file" id="formFile"
+															name="anggota[500][sertifikat_pbj]"
+															accept="application/pdf">
+													</div>
+												</div>
+												<div class="separator border-dark my-10"></div>
+												<div class="row">
+													<!--begin::Form group-->
+													<div data-repeater-list="anggota">
+														<div data-repeater-item="">
+															<!--begin::Select2-->
+															<div class="row">
+																<div>
+																	<h3>Anggota Kelompok Kerja</h3>
+																	<div
+																		class="separator separator-dashed border-dark my-3">
+																	</div>
+																</div>
+
+																<!--begin::Input group-->
+																<div class="d-flex flex-wrap gap-5 mb-5">
+																	<div class="fv-row w-100 flex-md-root">
+																		<!--begin::Label-->
+																		<label
+																			class="d-flex align-items-center fs-6 fw-bold mb-2">
+																			<span class="required">NIP</span>
+																		</label>
+																		<!--end::Label-->
+																		<!--begin::Input-->
+																		<div class="input-group">
+																			<input type="text"
+																				class="form-control form-control-solid"
+																				placeholder="Masukan NIP" name="nip"
+																				required />
+																			<span>
+																				<a name="button_nip"
+																					onclick="sikep(this)"
+																					class="btn btn-primary bg-dark"
+																					style="border-radius: 0px 5px 5px 0px;"><i
+																						class="bi bi-cloud-check fs-4"></i>
+																					Cek NIP</a>
+																			</span>
+																		</div>
+																		<!--end::Input-->
+																	</div>
+																	<!--end::Input group-->
+																	<!--begin::Input group-->
+																	<div class="fv-row w-100 flex-md-root">
+																		<!--begin::Label-->
+																		<label
+																			class="d-flex align-items-center fs-6 fw-bold mb-2">
+																			<span class="required">Nama </span>
+																		</label>
+																		<!--end::Label-->
+																		<!--begin::Input-->
+																		<input type="text"
+																			class="form-control form-control-solid"
+																			placeholder="Masukan Nama" name="nama"
+																			required />
+																		<!--end::Input-->
+																	</div>
+																</div>
+																<div class="d-flex flex-wrap gap-5 mb-5">
+																	<div class="fv-row w-100 flex-md-root">
+																		<!--begin::Label-->
+																		<label
+																			class="d-flex align-items-center fs-6 fw-bold mb-2">
+																			<span class="required">Satuan Kerja</span>
+																		</label>
+																		<!--end::Label-->
+																		<!--begin::Input-->
+																		<input type="text"
+																			class="form-control form-control-solid"
+																			placeholder="Masukan Satuan Kerja"
+																			name="satuan_kerja" required />
+																		<!--end::Input-->
+																	</div>
+																	<!--end::Input group-->
+																	<!--begin::Input group-->
+																	<div class="fv-row w-100 flex-md-root">
+																		<!--begin::Label-->
+																		<label
+																			class="d-flex align-items-center fs-6 fw-bold mb-2">
+																			<span class="required">Jabatan</span>
+																		</label>
+																		<!--end::Label-->
+																		<!--begin::Input-->
+																		<input type="text"
+																			class="form-control form-control-solid"
+																			placeholder="Masukan Jabatan" name="jabatan"
+																			required />
+																		<input type="hidden"
+																			class="form-control form-control-solid"
+																			placeholder="Masukan Jabatan" name="posisi"
+																			value="Anggota" />
+																		<!--end::Input-->
+																	</div>
+																</div>
+																<div class="d-flex flex-wrap gap-5 mb-5">
+																	<!--begin::Input group-->
+																	<div class="fv-row w-100 flex-md-root">
+																		<label for="formFile" class="form-label">Upload
+																			Sertifikat
+																			Pengadaan
+																			Barang
+																			dan Jasa</label>
+																		<input class="form-control" type="file"
+																			id="formFile" name="sertifikat_pbj"
+																			accept="application/pdf">
+																	</div>
+																	<!--end::Input group-->
+																	<!--begin::Input group-->
+																	<div class="fv-row w-100 flex-md-root py-8">
+																		<button type="button" data-repeater-delete=""
+																			class="btn btn-lg  btn-light-danger">
+																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr088.svg-->
+																			<span class="svg-icon svg-icon-2">
+																				<svg xmlns="http://www.w3.org/2000/svg"
+																					width="24" height="24"
+																					viewBox="0 0 24 24" fill="none">
+																					<rect opacity="0.5" x="7.05025"
+																						y="15.5356" width="12"
+																						height="2" rx="1"
+																						transform="rotate(-45 7.05025 15.5356)"
+																						fill="black" />
+																					<rect x="8.46447" y="7.05029"
+																						width="12" height="2" rx="1"
+																						transform="rotate(45 8.46447 7.05029)"
+																						fill="black" />
+																				</svg>
+																			</span>
+																			<!--end::Svg Icon-->Hapus Anggota Kerja
+																		</button>
+																		<!--end::Button-->
+																	</div>
+																	<!--end::Input group-->
+																</div>
+															</div>
+															<div class="separator border-dark my-10"></div>
+														</div>
+													</div>
+													<!--end::Form group-->
+													<!--begin::Form group-->
+													<div class="form-group mt-5">
+														<!--begin::Button-->
+														<button type="button" data-repeater-create=""
+															class="btn btn-lg btn-light-primary">
+															<!--begin::Svg Icon | path: icons/duotune/arrows/arr087.svg-->
+															<span class="svg-icon svg-icon-2">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24"
+																	height="24" viewBox="0 0 24 24" fill="none">
+																	<rect opacity="0.5" x="11" y="18" width="12"
+																		height="2" rx="1" transform="rotate(-90 11 18)"
+																		fill="black" />
+																	<rect x="6" y="11" width="12" height="2" rx="1"
+																		fill="black" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->Tambah Anggota Kerja
+														</button>
+														<!--end::Button-->
+													</div>
+													<!--end::Form group-->
+												</div>
+											</div>
+											<!--end::row-->
+										</div>
+										<!--end::row-->
+										<!--begin::row-->
+										<div class="row">
+											<div class="d-grid gap-2 d-md-block text-center">
+												<a href="#" class="btn btn-warning btn-hover-rise bg-dark"><i
+														class="bi bi-x"></i>
+													Batal</a>
+												<button type="submit" class="btn btn-success btn-hover-rise bg-dark"
+													value="simpan"><i class="bi bi-save2"></i>Simpan</button>
+											</div>
+										</div>
+										<!--end::row-->
+									</div>
+							</form>
+						</div>
+
+						<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+							<div id="kt_content_container">
+								<div class="row">
+									<div class="card shadow-sm px-0 mb-6 mb-xl-4">
+										<div class="card-header ribbon ribbon-top ribbon-vertical rounded-top-2"
+											style="background-color: darkred;">
+											<div class="ribbon-label bg-dark">
+												<i class="bi bi-pencil fs-2 text-light"></i>
+											</div>
+											<div class="card-title text-light">Input Paket Pengadaan</div>
+										</div>
+										<div class="card-body">
+											<!--begin::Stepper-->
+											<div class="stepper stepper-pills" id="kt_stepper_example_clickable">
+												<!--begin::Nav-->
+												<div class="stepper-nav flex-center flex-wrap mb-10">
+													<!--begin::Step 1-->
+													<div class="stepper-item mx-2 my-4 current"
+														data-kt-stepper-element="nav" data-kt-stepper-action="step">
+														<!--begin::Line-->
+														<div class="stepper-line w-40px"></div>
+														<!--end::Line-->
+
+														<!--begin::Icon-->
+														<div class="stepper-icon w-40px h-40px">
+															<i class="stepper-check fas fa-check"></i>
+															<span class="stepper-number">1</span>
+														</div>
+														<!--end::Icon-->
+
+														<!--begin::Label-->
+														<div class="stepper-label">
+															<h3 class="stepper-title">
+																Tahap 1
+															</h3>
+
+															<div class="stepper-desc">
+																Input Surat Usulan
+															</div>
+														</div>
+														<!--end::Label-->
+													</div>
+													<!--end::Step 1-->
+
+													<!--begin::Step 2-->
+													<div class="stepper-item mx-2 my-4" data-kt-stepper-element="nav"
+														data-kt-stepper-action="step">
+														<!--begin::Line-->
+														<div class="stepper-line w-40px"></div>
+														<!--end::Line-->
+
+														<!--begin::Icon-->
+														<div class="stepper-icon w-40px h-40px">
+															<i class="stepper-check fas fa-check"></i>
+															<span class="stepper-number">2</span>
+														</div>
+														<!--begin::Icon-->
+
+														<!--begin::Label-->
+														<div class="stepper-label">
+															<h3 class="stepper-title">
+																Step 2
+															</h3>
+
+															<div class="stepper-desc">
+																Description
+															</div>
+														</div>
+														<!--end::Label-->
+													</div>
+													<!--end::Step 2-->
+
+													<!--begin::Step 3-->
+													<div class="stepper-item mx-2 my-4" data-kt-stepper-element="nav"
+														data-kt-stepper-action="step">
+														<!--begin::Line-->
+														<div class="stepper-line w-40px"></div>
+														<!--end::Line-->
+
+														<!--begin::Icon-->
+														<div class="stepper-icon w-40px h-40px">
+															<i class="stepper-check fas fa-check"></i>
+															<span class="stepper-number">3</span>
+														</div>
+														<!--begin::Icon-->
+
+														<!--begin::Label-->
+														<div class="stepper-label">
+															<h3 class="stepper-title">
+																Step 3
+															</h3>
+
+															<div class="stepper-desc">
+																Description
+															</div>
+														</div>
+														<!--end::Label-->
+													</div>
+													<!--end::Step 3-->
+
+													<!--begin::Step 4-->
+													<div class="stepper-item mx-2 my-4" data-kt-stepper-element="nav"
+														data-kt-stepper-action="step">
+														<!--begin::Line-->
+														<div class="stepper-line w-40px"></div>
+														<!--end::Line-->
+
+														<!--begin::Icon-->
+														<div class="stepper-icon w-40px h-40px">
+															<i class="stepper-check fas fa-check"></i>
+															<span class="stepper-number">4</span>
+														</div>
+														<!--begin::Icon-->
+
+														<!--begin::Label-->
+														<div class="stepper-label">
+															<h3 class="stepper-title">
+																Step 4
+															</h3>
+
+															<div class="stepper-desc">
+																Description
+															</div>
+														</div>
+														<!--end::Label-->
+													</div>
+													<!--end::Step 4-->
+												</div>
+												<!--end::Nav-->
+
+												<!--begin::Form-->
+												<form class="form w-lg-500px mx-auto" novalidate="novalidate"
+													id="kt_stepper_example_basic_form">
+													<!--begin::Group-->
+													<div class="mb-5">
+														<!--begin::Step 1-->
+														<div class="flex-column current"
+															data-kt-stepper-element="content">
+															<!--begin::Input group-->
+															<div class="fv-row mb-10">
+																<!--begin::Label-->
+																<label
+																	class="d-flex align-items-center fs-6 fw-bold mb-2">
+																	<span class="required">Kode RUP</span>
+																</label>
+																<!--end::Label-->
+																<!--begin::Input-->
+																<input type="hidden"
+																	class="form-control form-control-solid"
+																	name="kode_satker"
+																	value="<?= user()->kode_satker ?>" />
+																<input type="hidden"
+																	class="form-control form-control-solid"
+																	name="kode_satker_parent"
+																	value="<?= user()->kode_satker_parent ?>" />
+																<input type="text"
+																	class="form-control form-control-solid"
+																	placeholder="Masukan Kode RUP" name="kode_rup"
+																	required />
+																<!--end::Input-->
+															</div>
+															<!--end::Input group-->
+
+															<!--begin::Input group-->
+															<div class="fv-row mb-10">
+																<!--begin::Label-->
+																<label class="form-label">Example Label 2</label>
+																<!--end::Label-->
+
+																<!--begin::Input-->
+																<input type="text"
+																	class="form-control form-control-solid"
+																	name="input2" placeholder="" value="" />
+																<!--end::Input-->
+															</div>
+															<!--end::Input group-->
+
+															<!--begin::Input group-->
+															<div class="fv-row mb-10">
+																<!--begin::Label-->
+																<label class="form-label">Example Label 3</label>
+																<!--end::Label-->
+
+																<!--begin::Switch-->
+																<label
+																	class="form-check form-switch form-check-custom form-check-solid">
+																	<input class="form-check-input" type="checkbox"
+																		checked="checked" value="1" />
+																	<span class="form-check-label">
+																		Switch
+																	</span>
+																</label>
+																<!--end::Switch-->
+															</div>
+															<!--end::Input group-->
+														</div>
+														<!--begin::Step 1-->
+
+														<!--begin::Step 1-->
+														<div class="flex-column" data-kt-stepper-element="content">
+															<!--begin::Input group-->
+															<div class="fv-row mb-10">
+																<!--begin::Label-->
+																<label class="form-label">Example Label 1</label>
+																<!--end::Label-->
+
+																<!--begin::Input-->
+																<input type="text"
+																	class="form-control form-control-solid"
+																	name="input1" placeholder="" value="" />
+																<!--end::Input-->
+															</div>
+															<!--end::Input group-->
+
+															<!--begin::Input group-->
+															<div class="fv-row mb-10">
+																<!--begin::Label-->
+																<label class="form-label">Example Label 2</label>
+																<!--end::Label-->
+
+																<!--begin::Input-->
+																<textarea class="form-control form-control-solid"
+																	rows="3" name="input2" placeholder=""></textarea>
+																<!--end::Input-->
+															</div>
+															<!--end::Input group-->
+
+															<!--begin::Input group-->
+															<div class="fv-row mb-10">
+																<!--begin::Label-->
+																<label class="form-label">Example Label 3</label>
+																<!--end::Label-->
+
+																<!--begin::Input-->
+																<label
+																	class="form-check form-check-custom form-check-solid">
+																	<input class="form-check-input" checked="checked"
+																		type="checkbox" value="1" />
+																	<span class="form-check-label">
+																		Checkbox
+																	</span>
+																</label>
+																<!--end::Input-->
+															</div>
+															<!--end::Input group-->
+														</div>
+														<!--begin::Step 1-->
+
+														<!--begin::Step 1-->
+														<div class="flex-column" data-kt-stepper-element="content">
+															<!--begin::Input group-->
+															<div class="fv-row mb-10">
+																<!--begin::Label-->
+																<label class="form-label d-flex align-items-center">
+																	<span class="required">Input 1</span>
+																	<i class="fas fa-exclamation-circle ms-2 fs-7"
+																		data-bs-toggle="tooltip"
+																		title="Example tooltip"></i>
+																</label>
+																<!--end::Label-->
+
+																<!--begin::Input-->
+																<input type="text"
+																	class="form-control form-control-solid"
+																	name="input1" placeholder="" value="" />
+																<!--end::Input-->
+															</div>
+															<!--end::Input group-->
+
+															<!--begin::Input group-->
+															<div class="fv-row mb-10">
+																<!--begin::Label-->
+																<label class="form-label">
+																	Input 2
+																</label>
+																<!--end::Label-->
+
+																<!--begin::Input-->
+																<input type="text"
+																	class="form-control form-control-solid"
+																	name="input2" placeholder="" value="" />
+																<!--end::Input-->
+															</div>
+															<!--end::Input group-->
+														</div>
+														<!--begin::Step 1-->
+
+														<!--begin::Step 1-->
+														<div class="flex-column" data-kt-stepper-element="content">
+															<!--begin::Input group-->
+															<div class="fv-row mb-10">
+																<!--begin::Label-->
+																<label class="form-label d-flex align-items-center">
+																	<span class="required">Input 1</span>
+																	<i class="fas fa-exclamation-circle ms-2 fs-7"
+																		data-bs-toggle="tooltip"
+																		title="Example tooltip"></i>
+																</label>
+																<!--end::Label-->
+
+																<!--begin::Input-->
+																<input type="text"
+																	class="form-control form-control-solid"
+																	name="input1" placeholder="" value="" />
+																<!--end::Input-->
+															</div>
+															<!--end::Input group-->
+
+															<!--begin::Input group-->
+															<div class="fv-row mb-10">
+																<!--begin::Label-->
+																<label class="form-label">
+																	Input 2
+																</label>
+																<!--end::Label-->
+
+																<!--begin::Input-->
+																<input type="text"
+																	class="form-control form-control-solid"
+																	name="input2" placeholder="" value="" />
+																<!--end::Input-->
+															</div>
+															<!--end::Input group-->
+
+															<!--begin::Input group-->
+															<div class="fv-row mb-10">
+																<!--begin::Label-->
+																<label class="form-label">
+																	Input 3
+																</label>
+																<!--end::Label-->
+
+																<!--begin::Input-->
+																<input type="text"
+																	class="form-control form-control-solid"
+																	name="input3" placeholder="" value="" />
+																<!--end::Input-->
+															</div>
+															<!--end::Input group-->
+														</div>
+														<!--begin::Step 1-->
+													</div>
+													<!--end::Group-->
+
+													<!--begin::Actions-->
+													<div class="d-flex flex-stack">
+														<!--begin::Wrapper-->
+														<div class="me-2">
+															<button type="button"
+																class="btn btn-light btn-active-light-primary"
+																data-kt-stepper-action="previous">
+																Back
+															</button>
+														</div>
+														<!--end::Wrapper-->
+
+														<!--begin::Wrapper-->
+														<div>
+															<button type="button" class="btn btn-primary"
+																data-kt-stepper-action="submit">
+																<span class="indicator-label">
+																	Submit
+																</span>
+																<span class="indicator-progress">
+																	Please wait... <span
+																		class="spinner-border spinner-border-sm align-middle ms-2"></span>
+																</span>
+															</button>
+
+															<button type="button" class="btn btn-primary"
+																data-kt-stepper-action="next">
+																Continue
+															</button>
+														</div>
+														<!--end::Wrapper-->
+													</div>
+													<!--end::Actions-->
+												</form>
+												<!--end::Form-->
+											</div>
+											<!--end::Stepper-->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
 						<!--end::Post Content Hereee -->
 						<!--begin::Footer-->
 						<div class="footer py-4 d-flex flex-column flex-md-row flex-stack" id="kt_footer">
@@ -1141,6 +2026,68 @@ License: For each use you must have a valid license purchased only from above li
 			altInput: true,
 			altFormat: "j F Y",
 			dateFormat: "Y-m-d",
+		});
+	</script>
+	<script>
+		let select = document.getElementById('dropdownYear');
+		let currYear = new Date().getFullYear();
+		let futureYear = currYear + 3;
+		let pastYear = currYear - 3;
+		for (let year = pastYear; year <= futureYear; year++) {
+			let option = document.createElement('option');
+			option.setAttribute('value', year);
+			if (year === currYear) {
+				option.setAttribute('selected', true);
+			}
+			option.innerHTML = year;
+			select.appendChild(option);
+		}
+	</script>
+	<script>
+		/* Tanpa Rupiah */
+		var tanpa_rupiah = document.getElementById('tanpa-rupiah');
+		tanpa_rupiah.addEventListener('keyup', function (e) {
+			tanpa_rupiah.value = formatRupiah(this.value);
+		});
+
+
+		/* Fungsi */
+		function formatRupiah(angka, prefix) {
+			var number_string = angka.replace(/[^,\d]/g, '').toString(),
+				split = number_string.split(','),
+				sisa = split[0].length % 3,
+				rupiah = split[0].substr(0, sisa),
+				ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+
+			if (ribuan) {
+				separator = sisa ? '.' : '';
+				rupiah += separator + ribuan.join('.');
+			}
+
+			rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+			return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
+		}
+	</script>
+	<script>
+		// Stepper lement
+		var element = document.querySelector("#kt_stepper_example_clickable");
+
+		// Initialize Stepper
+		var stepper = new KTStepper(element);
+
+		// Handle navigation click
+		stepper.on("kt.stepper.click", function (stepper) {
+			stepper.goTo(stepper.getClickedStepIndex()); // go to clicked step
+		});
+
+		// Handle next step
+		stepper.on("kt.stepper.next", function (stepper) {
+			stepper.goNext(); // go next step
+		});
+
+		// Handle previous step
+		stepper.on("kt.stepper.previous", function (stepper) {
+			stepper.goPrevious(); // go previous step
 		});
 	</script>
 	<!--end::Page Custom Javascript-->
