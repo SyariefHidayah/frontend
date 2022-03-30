@@ -68,30 +68,48 @@ License: For each use you must have a valid license purchased only from above li
 					<div class="col bg-body">
 						<div class="p-10">
 							<!--begin::Form-->
-							<form class="form w-100 fv-plugins-bootstrap5 fv-plugins-framework" novalidate="novalidate"
-								id="kt_password_reset_form">
+							<form class="form w-100 fv-plugins-bootstrap5 fv-plugins-framework" id="changepass">
 								<!--begin::Heading-->
 								<div class="text-center mb-10">
-									<br>
-									<br>
-									<br>
-									<br>
-									<br>
-									<br>
 									<!--begin::Title-->
-									<h1 class="text-dark mb-3">Lupa Password ?</h1>
+									<h1 class="text-dark mb-3">Ganti Password Anda</h1>
 									<!--end::Title-->
 									<!--begin::Link-->
-									<div class="text-gray-400 fw-bold fs-4">Masukan Email Anda Untuk Reset Password.
+									<div class="text-gray-400 fw-bold fs-4">Masukan kode Token yang anda dapatkan di
+										email anda, dan masukan password baru .
 									</div>
 									<!--end::Link-->
 								</div>
 								<!--begin::Heading-->
 								<!--begin::Input group-->
 								<div class="fv-row mb-10 fv-plugins-icon-container">
+									<label class="form-label fw-bolder text-gray-900 fs-6">Token</label>
+									<input class="form-control form-control-solid" placeholder="Masukan Kode Token"
+										name="token" autocomplete="off">
+								</div>
+								<div class="fv-row mb-10 fv-plugins-icon-container">
 									<label class="form-label fw-bolder text-gray-900 fs-6">Email</label>
 									<input class="form-control form-control-solid" type="email"
-										placeholder="Masukan Email Yang Terdaftar" name="email" autocomplete="off">
+										placeholder="Masukan Alamat Email" name="email" autocomplete="off">
+								</div>
+								<div class="fv-row mb-10 fv-plugins-icon-container">
+									<label class="form-label fw-bolder text-gray-900 fs-6">Pasword Baru</label>
+									<input class="form-control form-control-solid" type="password"
+										placeholder="Masukan Password Baru" name="passwordbaru" id="passbaru"
+										autocomplete="off">
+									<br>
+									<input type="checkbox" onclick="Toggle1()">
+									<b>Show Password</b>
+								</div>
+								<div class="fv-row mb-10 fv-plugins-icon-container">
+									<label class="form-label fw-bolder text-gray-900 fs-6">Masukan Kembali Password
+										Baru</label>
+									<input class="form-control form-control-solid"
+										placeholder="Masukan Kembali Password Baru" type="password" name="passwordbaru2"
+										id="passbaru2" autocomplete="off">
+									<br>
+									<input type="checkbox" onclick="Toggle2()">
+									<b>Show Password</b>
 								</div>
 								<!--end::Input group-->
 								<!--begin::Actions-->
@@ -141,6 +159,27 @@ License: For each use you must have a valid license purchased only from above li
 	<!--end::Global Javascript Bundle-->
 	<!--begin::Page Custom Javascript(used by this page)-->
 	<script src="assets/js/custom/authentication/sign-in/general.js"></script>
+	<script>
+		// Change the type of input to password or text
+		function Toggle1() {
+			var temp = document.getElementById("passbaru");
+			if (temp.type === "password") {
+				temp.type = "text";
+			}
+			else {
+				temp.type = "password";
+			}
+		}
+		function Toggle2() {
+			var temp = document.getElementById("passbaru2");
+			if (temp.type === "password") {
+				temp.type = "text";
+			}
+			else {
+				temp.type = "password";
+			}
+		}
+	</script>
 	<!--end::Page Custom Javascript-->
 	<!--end::Javascript-->
 </body>

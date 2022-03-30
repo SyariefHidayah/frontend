@@ -69,7 +69,7 @@ License: For each use you must have a valid license purchased only from above li
 					<div class="col bg-body">
 						<div class="p-10">
 							<!--begin::Form-->
-							<form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" action="#">
+							<form class="form w-100" id="" action="#">
 								<!--begin::Heading-->
 								<br>
 								<br>
@@ -94,7 +94,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--end::Label-->
 									<!--begin::Input-->
 									<input class="form-control form-control-lg form-control-solid" type="text"
-										name="username" autocomplete="off" />
+										name="username" autocomplete="off" placeholder="Masukan Username" />
 									<!--end::Input-->
 								</div>
 								<!--end::Input group-->
@@ -113,7 +113,10 @@ License: For each use you must have a valid license purchased only from above li
 									<!--end::Wrapper-->
 									<!--begin::Input-->
 									<input class="form-control form-control-lg form-control-solid" type="password"
-										name="password" autocomplete="off" />
+										name="password" autocomplete="off" placeholder="Masukan Password" id="pass" />
+									<br>
+									<input type="checkbox" onclick="Toggle()">
+									<b>Show Password</b>
 									<!--end::Input-->
 								</div>
 								<!--end::Input group-->
@@ -163,6 +166,16 @@ License: For each use you must have a valid license purchased only from above li
 	<!--end::Global Javascript Bundle-->
 	<!--begin::Page Custom Javascript(used by this page)-->
 	<script src="assets/js/custom/authentication/sign-in/general.js"></script>
+	<script>
+		function Toggle() {
+			var temp = document.getElementById("pass");
+			if (temp.type === "password") {
+				temp.type = "text";
+			}
+			else {
+				temp.type = "password";
+			}
+		}</script>
 	<!--end::Page Custom Javascript-->
 	<!--end::Javascript-->
 </body>
