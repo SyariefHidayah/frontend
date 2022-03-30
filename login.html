@@ -112,11 +112,13 @@ License: For each use you must have a valid license purchased only from above li
 									</div>
 									<!--end::Wrapper-->
 									<!--begin::Input-->
-									<input class="form-control form-control-lg form-control-solid" type="password"
-										name="password" autocomplete="off" placeholder="Masukan Password" id="pass" />
-									<br>
-									<input type="checkbox" onclick="Toggle()">
-									<b>Show Password</b>
+									<div class="input-group">
+										<input class="form-control form-control-solid" placeholder="Masukan Password"
+											type="password" name="password" id="pass" autocomplete="off">
+										<span class="input-group-text"><i class="far fa-eye" onclick="Toggle()"
+												data-bs-toggle="tooltip" data-bs-custom-class="tooltip-dark"
+												data-bs-placement="top" title="Tampilkan Password"></i></span>
+									</div>
 									<!--end::Input-->
 								</div>
 								<!--end::Input group-->

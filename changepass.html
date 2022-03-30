@@ -94,22 +94,26 @@ License: For each use you must have a valid license purchased only from above li
 								</div>
 								<div class="fv-row mb-10 fv-plugins-icon-container">
 									<label class="form-label fw-bolder text-gray-900 fs-6">Pasword Baru</label>
-									<input class="form-control form-control-solid" type="password"
-										placeholder="Masukan Password Baru" name="passwordbaru" id="passbaru"
-										autocomplete="off">
-									<br>
-									<input type="checkbox" onclick="Toggle1()">
-									<b>Show Password</b>
+									<div class="input-group">
+										<input class="form-control form-control-solid"
+											placeholder="Masukan Password Baru" type="password" name="passwordbaru"
+											id="passbaru" autocomplete="off">
+										<span class="input-group-text"><i class="far fa-eye" onclick="Toggle1()"
+												data-bs-toggle="tooltip" data-bs-custom-class="tooltip-dark"
+												data-bs-placement="top" title="Tampilkan Password"></i></span>
+									</div>
 								</div>
 								<div class="fv-row mb-10 fv-plugins-icon-container">
 									<label class="form-label fw-bolder text-gray-900 fs-6">Masukan Kembali Password
 										Baru</label>
-									<input class="form-control form-control-solid"
-										placeholder="Masukan Kembali Password Baru" type="password" name="passwordbaru2"
-										id="passbaru2" autocomplete="off">
-									<br>
-									<input type="checkbox" onclick="Toggle2()">
-									<b>Show Password</b>
+									<div class="input-group">
+										<input class="form-control form-control-solid"
+											placeholder="Masukan Kembali Password Baru" type="password"
+											name="passwordbaru2" id="passbaru2" autocomplete="off">
+										<span class="input-group-text"><i class="far fa-eye" onclick="Toggle2()"
+												data-bs-toggle="tooltip" data-bs-custom-class="tooltip-dark"
+												data-bs-placement="top" title="Tampilkan Password"></i></span>
+									</div>
 								</div>
 								<!--end::Input group-->
 								<!--begin::Actions-->
