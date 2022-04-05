@@ -40,6 +40,49 @@ License: For each use you must have a valid license purchased only from above li
 	<!--begin::Global Stylesheets Bundle(used by all pages)-->
 	<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
 	<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+
+	<style>
+		.custom-field {
+			border: 1px solid;
+			border-top: none;
+			margin: 32px 2px;
+			padding: 8px;
+		}
+
+		.custom-field h1 {
+			font-family: 'Montserrat', sans-serif;
+			font: 16px normal;
+			margin: -16px -8px 0;
+		}
+
+
+
+		.custom-field h1 span {
+			float: left;
+		}
+
+
+		.custom-field h1:before {
+			border-top: 1px solid;
+			content: ' ';
+			float: left;
+			margin: 8px 2px 0 -1px;
+			width: 12px;
+		}
+
+
+		.custom-field h1:after {
+			border-top: 1px solid;
+			content: ' ';
+			display: block;
+			height: 24px;
+			left: 2px;
+			margin: 0 1px 0 0;
+			overflow: hidden;
+			position: relative;
+			top: 8px;
+		}
+	</style>
 	<!--end::Global Stylesheets Bundle-->
 </head>
 <!--end::Head-->
@@ -479,7 +522,7 @@ License: For each use you must have a valid license purchased only from above li
 													</li>
 													<li class="nav-item">
 														<a class="nav-link text-black" data-bs-toggle="tab"
-															href="#kt_tab_pane_5">Progress Dokumen</a>
+															href="#kt_tab_pane_5">Realisasi Anggaran</a>
 													</li>
 													<li class="nav-item">
 														<a class="nav-link text-black" data-bs-toggle="tab"
@@ -488,78 +531,220 @@ License: For each use you must have a valid license purchased only from above li
 												</ul>
 
 												<div class="tab-content" id="myTabContent">
-													<div class="tab-pane fade show active py-3" id="kt_tab_pane_4"
+													<div class="tab-pane fade show active py-1" id="kt_tab_pane_4"
 														role="tabpanel">
 
-														<div class="row text-center fw-bolder px-20">
-															<p class="fs-2  mb-10">KEGIATAN PEMINDAHAN DAN
-																PERAWATAN RUANG POLI GIGI MAHKAMAH AGUNG RI</p>
-															<div class="separator mb-15"></div>
-
-															<p class="fs-4">Nomor Kontrak : 131/BUA.7/sk/07/2022</p>
-															<p class="fs-4">Tanggal Kontrak : 23/Maret/2022</p>
-														</div>
-														<div class="row fw-bolder px-20">
-															<table class="table fs-4  ">
-
-																<tr>
-																	<td width="10%">PENYEDIA</td>
-																	<td width="2%">:</td>
-																	<td width="83%" style="text-align: justify;">
-																		CV.INDOTECH PRIMA</td>
-																</tr>
-																<tr>
-																	<td width="10%">SATKER</td>
-																	<td width="2%">:</td>
-																	<td width="83%" style="text-align: justify;">
-																		PENGADILAN AGAMA CIAMIS</td>
-																</tr>
-																<tr>
-																	<td width="10%">DIPA</td>
-																	<td width="2%">:</td>
-																	<td width="83%" style="text-align: justify;">
-																		TAHUN ANGGARAN 2020 <br>
-																		NOMOR : SP DIPA-005.01.1.663157/2020 <br>
-																		TANGGAL : 12 NOVEMBER 2019 <br>
-
-																	</td>
-																</tr>
-																<tr>
-																	<td width="10%">NILAI KONTRAK</td>
-																	<td width="2%">:</td>
-																	<td width="83%" style="text-align: justify;">
-																		Rp. 643.143.000
-																	</td>
-																</tr>
-																<tr>
-																	<td width="10%">PELAKSANAAN</td>
-																	<td width="2%">:</td>
-																	<td width="83%" style="text-align: justify;">
-																		TERHITUNG MULAI TANGGAL 30 SEPTEMBER 2020 s/d 18
-																		NOVEMBER 2020
-
-																	</td>
-																</tr>
-															</table>
-															<div class="text-center">
-																<button type="button"
-																	class=" btn btn-warning btn-hover-rise bg-dark">
-																	<i class="bi bi-pencil-square"></i>
-																	Edit Ringkasan Kontrak
-																</button>
+														<div class="custom-field">
+															<h1>
+																<span>
+																	Kontrak
+																</span>
+															</h1>
+															<div class="row text-center fw-bolder px-20">
+																<p class="fs-2">KEGIATAN PEMINDAHAN DAN
+																	PERAWATAN RUANG POLI GIGI MAHKAMAH AGUNG RI</p>
+																<div class="separator border-2 mb-5"></div>
 															</div>
+															<div class="row fw-bolder px-20 mb-5">
+																<table class="table fs-4  ">
+																	<tr>
+																		<td width="15%">KODE RUP</td>
+																		<td width="2%">:</td>
+																		<td width="78%" style="text-align: justify;">
+																			123456788765</td>
+																	</tr>
+																	<tr>
+																		<td width="15%">TAHUN ANGGARAN</td>
+																		<td width="2%">:</td>
+																		<td width="78%" style="text-align: justify;">
+																			2020
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="15%">NO KONTRAK</td>
+																		<td width="2%">:</td>
+																		<td width="78%" style="text-align: justify;">
+																			131/BUA.7/sk/07/2022</td>
+																	</tr>
+																	<tr>
+																		<td width="15%">TANGGAL KONTRAK</td>
+																		<td width="2%">:</td>
+																		<td width="78%" style="text-align: justify;">
+																			23/Maret/2022</td>
+																	</tr>
+																	<tr>
+																		<td width="15%">PENYEDIA</td>
+																		<td width="2%">:</td>
+																		<td width="78%" style="text-align: justify;">
+																			CV.INDOTECH PRIMA</td>
+																	</tr>
+																	<tr>
+																		<td width="15%">SATKER</td>
+																		<td width="2%">:</td>
+																		<td width="78%" style="text-align: justify;">
+																			PENGADILAN AGAMA CIAMIS</td>
+																	</tr>
+
+																	<tr>
+																		<td width="15%">NILAI KONTRAK</td>
+																		<td width="2%">:</td>
+																		<td width="78%" style="text-align: justify;">
+																			Rp. 643.143.000
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="15%">PELAKSANAAN</td>
+																		<td width="2%">:</td>
+																		<td width="78%" style="text-align: justify;">
+																			TERHITUNG MULAI TANGGAL 30 SEPTEMBER 2020
+																			s/d 18
+																			NOVEMBER 2020
+
+																		</td>
+																	</tr>
+																</table>
+
+															</div>
+														</div>
+
+														<div class="custom-field">
+															<h1>
+																<span>
+																	Addendum Kontrak
+																</span>
+															</h1>
+															<div class="row text-center fw-bolder px-20">
+																<p class="fs-2">KEGIATAN PEMINDAHAN DAN
+																	PERAWATAN RUANG POLI GIGI MAHKAMAH AGUNG RI</p>
+																<div class="separator border-2 mb-5"></div>
+															</div>
+															<div class="row fw-bolder px-20 mb-5">
+																<table class="table fs-4  ">
+																	<tr>
+																		<td width="15%">KODE RUP</td>
+																		<td width="2%">:</td>
+																		<td width="78%" style="text-align: justify;">
+																			123456788765</td>
+																	</tr>
+																	<tr>
+																		<td width="15%">TAHUN ANGGARAN</td>
+																		<td width="2%">:</td>
+																		<td width="78%" style="text-align: justify;">
+																			2020
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="15%">NO KONTRAK</td>
+																		<td width="2%">:</td>
+																		<td width="78%" style="text-align: justify;">
+																			131/BUA.7/sk/07/2022</td>
+																	</tr>
+																	<tr>
+																		<td width="15%">TANGGAL KONTRAK</td>
+																		<td width="2%">:</td>
+																		<td width="78%" style="text-align: justify;">
+																			23/Maret/2022</td>
+																	</tr>
+																	<tr>
+																		<td width="15%">PENYEDIA</td>
+																		<td width="2%">:</td>
+																		<td width="78%" style="text-align: justify;">
+																			CV.INDOTECH PRIMA</td>
+																	</tr>
+																	<tr>
+																		<td width="15%">SATKER</td>
+																		<td width="2%">:</td>
+																		<td width="78%" style="text-align: justify;">
+																			PENGADILAN AGAMA CIAMIS</td>
+																	</tr>
+
+																	<tr>
+																		<td width="15%">NILAI KONTRAK</td>
+																		<td width="2%">:</td>
+																		<td width="78%" style="text-align: justify;">
+																			Rp. 643.143.000
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="15%">PELAKSANAAN</td>
+																		<td width="2%">:</td>
+																		<td width="78%" style="text-align: justify;">
+																			TERHITUNG MULAI TANGGAL 30 SEPTEMBER 2020
+																			s/d 18
+																			NOVEMBER 2020
+
+																		</td>
+																	</tr>
+																</table>
+
+															</div>
+														</div>
+
+
+														<div class="text-center">
+															<button type="button"
+																class=" btn btn-warning btn-hover-rise bg-dark mx-2">
+																<i class="bi bi-pencil-square"></i>
+																Edit Data Kontrak
+															</button>
+															<button type="button"
+																class="btn btn-success btn-hover-rise bg-dark">
+																<i class=" bi bi-plus-circle-dotted"></i>
+																Tambah Addendum Kontrak
+															</button>
 														</div>
 													</div>
 
 													<div class="tab-pane fade py-3" id="kt_tab_pane_5" role="tabpanel">
-														<div class="row">
-															<div class="col-sm-12 col-md-6 col-lg-4">
+														<div class="row row-cols-1">
+															<div class="col">
+																<!--begin::Ribbon wrapper 1-->
+																<div
+																	class="overflow-hidden position-relative card-rounded shadow-sm mb-5">
+
+
+																	<!--begin::Card-->
+																	<div class="card card-bordered ">
+																		<!--begin::Header-->
+																		<div
+																			class="card-header ribbon ribbon-top bg-info">
+																			<div class="ribbon-label bg-black p-3"><i
+																					class="bi bi-percent fs-2 text-light"></i>
+																			</div>
+																			<div class="card-title text-light">Progress
+																				Realisasi
+																				Anggaran</div>
+																		</div>
+																		<!--end::Header-->
+
+																		<!--begin::Body-->
+																		<div class="card-body pt-5">
+																			<div class="progress" style="height: 20px;">
+																				<div class="progress-bar progress-bar-striped progress-bar-animated fs-3"
+																					role="progressbar"
+																					style="width: 100%;"
+																					aria-valuenow="100"
+																					aria-valuemin="0"
+																					aria-valuemax="100">100%
+																				</div>
+																			</div>
+																		</div>
+																		<!--end::Body-->
+																	</div>
+																	<!--end::Card-->
+
+																</div>
+																<!--end::Ribbon wrapper 1-->
+															</div>
+														</div>
+														<div class="row mt-5">
+															<div class="col-sm-12 col-md-6 col-lg-6">
 																<!--begin::Ribbon wrapper 1-->
 																<div
 																	class="overflow-hidden position-relative card-rounded shadow-sm mb-5">
 																	<!--begin::Ribbon-->
 																	<div
-																		class="ribbon ribbon-triangle ribbon-top-start border-primary">
+																		class="ribbon ribbon-triangle ribbon-top-start border-success">
 																		<!--begin::Ribbon icon-->
 																		<div class="ribbon-icon mt-n6 ms-n6">
 																			<i
@@ -574,7 +759,7 @@ License: For each use you must have a valid license purchased only from above li
 																		<!--begin::Header-->
 																		<div
 																			class="card-header ribbon ribbon-top ribbon-vertical bg-secondary">
-																			<div class="card-title">Dokumen Bast</div>
+																			<div class="card-title">Dokumen BAP</div>
 																		</div>
 																		<!--end::Header-->
 
@@ -583,67 +768,393 @@ License: For each use you must have a valid license purchased only from above li
 
 
 																			<div class="konten_card">
-																				<p>
-																				<ul
-																					class="list-group list-group-flush p-0">
-																					<span
-																						class=" text-dark fw-bolder fs-5">No
-																						Dokumen BAST
-																					</span>
-																					<li
-																						class="d-flex align-items-center py-2 list-group-item">
-																						<span
-																							class="bullet bullet-vertical me-5 bg-primary"></span>
-																						12/BUA.7/SK/05/2022
-																					</li>
-																				</ul>
-																				<ul
-																					class="list-group list-group-flush p-0">
-																					<span
-																						class=" text-dark fw-bolder fs-5">Tanggal
-																						Dokumen BAST</span>
-																					<li
-																						class="d-flex align-items-center py-2 list-group-item">
-																						<span
-																							class="bullet bullet-vertical me-5 bg-primary"></span>
-																						02 Juni 2022
-																					</li>
-																				</ul>
-																				<ul
-																					class="list-group list-group-flush p-0">
-																					<span
-																						class=" text-dark fw-bolder fs-5">File
-																						Dokumen BAST</span>
-																					<li
-																						class="d-flex align-items-center py-2 list-group-item">
-																						<span
-																							class="bullet bullet-vertical me-5 bg-primary"></span><a
-																							href="#"
+
+																				<div class="custom-field">
+																					<h1>
+																						<span>
+																							Termin 1
+																						</span>
+																					</h1>
+																					<div class="row row-cols-2">
+																						<div class="col">
+																							<ul
+																								class="list-group list-group-flush p-0">
+																								<span
+																									class=" text-dark fw-bolder fs-5">No
+																									Dokumen BAP
+																								</span>
+																								<li
+																									class="d-flex align-items-center py-2 list-group-item">
+																									<span
+																										class="bullet bullet-vertical me-5 bg-primary"></span>
+																									12/BUA.7/SK/05/2022
+																								</li>
+																							</ul>
+																						</div>
+																						<div class="col">
+																							<ul
+																								class="list-group list-group-flush p-0">
+																								<span
+																									class=" text-dark fw-bolder fs-5">Tanggal
+																									Dokumen BAP</span>
+																								<li
+																									class="d-flex align-items-center py-2 list-group-item">
+																									<span
+																										class="bullet bullet-vertical me-5 bg-primary"></span>
+																									02 Juni 2022
+																								</li>
+																							</ul>
+																						</div>
+																						<div class="col">
+																							<ul
+																								class="list-group list-group-flush p-0">
+																								<span
+																									class=" text-dark fw-bolder fs-5">Nilai
+																									Pembayaran</span>
+																								<li
+																									class="d-flex align-items-center py-2 list-group-item">
+																									<span
+																										class="bullet bullet-vertical me-5 bg-primary"></span>
+																									Rp. 2.000.000.000
+																								</li>
+																							</ul>
+																						</div>
+																						<div class="col">
+																							<ul
+																								class="list-group list-group-flush p-0">
+																								<span
+																									class=" text-dark fw-bolder fs-5">File
+																									Dokumen BAP</span>
+																								<li
+																									class="d-flex align-items-center py-2 list-group-item">
+																									<span
+																										class="bullet bullet-vertical me-5 bg-primary"></span><a
+																										href="#"
+																										data-bs-toggle="modal"
+																										data-bs-target="#modalviewdokumen"
+																										data-bs-toggle="tooltip"
+																										data-bs-custom-class="tooltip-dark"
+																										data-bs-placement="left"
+																										title="Klik Untuk Preview"><i
+																											class="bi bi-file-pdf fs-4">
+																										</i>Nama File
+																										BAP</a>
+																								</li>
+																							</ul>
+																						</div>
+
+																					</div>
+																					<div class="text-center">
+																						<button type="button"
+																							class="wedus btn btn-warning btn-hover-rise bg-dark"
 																							data-bs-toggle="modal"
-																							data-bs-target="#modalviewdokumen"
-																							data-bs-toggle="tooltip"
-																							data-bs-custom-class="tooltip-dark"
-																							data-bs-placement="left"
-																							title="Klik Untuk Preview"><i
-																								class="bi bi-file-pdf fs-4">
-																							</i>Nama File</a>
-																					</li>
-																				</ul>
-																				</p>
-																				<div class=" text-center">
-																					<button type="button"
-																						class="accs btn btn-warning btn-hover-rise bg-dark"
-																						data-bs-toggle="modal"
-																						data-bs-target="#modal"
-																						title="Dokumen BAST"
-																						name="bast">
-																						<i
-																							class="bi bi-pencil-square"></i>
-																						Edit Data Dokumen
-																					</button>
+																							data-bs-target="#modalbap"
+																							title="Dokumen BAP"
+																							name="bap">
+																							<i
+																								class="bi bi-pencil-square"></i>
+																							Edit Data BAP
+																						</button>
+																					</div>
 																				</div>
 																			</div>
 
+																			<div class="tambahdata text-center">
+																				<button type="button"
+																					class="wedus btn btn-success btn-hover-rise bg-dark"
+																					data-bs-toggle="modal"
+																					data-bs-target="#modalbap"
+																					title="Termin BAP" name="terminbap">
+																					<i
+																						class=" bi bi-plus-circle-dotted"></i>
+																					Tambah Data Termin BAP
+																				</button>
+																			</div>
+																			<br>
+																			<div class="text-center">
+																				<p>
+																					Dokumen BAP Belum tersedia, Harap
+																					isi data sesuai dokumen terkait
+																				</p>
+																				<button type="button"
+																					class="wedus btn btn-success btn-hover-rise bg-dark"
+																					data-bs-toggle="modal"
+																					data-bs-target="#modalbap"
+																					title="Dokumen BAP" name="bap">
+																					<i
+																						class=" bi bi-plus-circle-dotted"></i>
+																					Tambah Data BAP
+																				</button>
+																			</div>
+																		</div>
+																		<!--end::Body-->
+																	</div>
+																	<!--end::Card-->
+
+																</div>
+																<!--end::Ribbon wrapper 1-->
+															</div>
+															<div class="col-sm-12 col-md-6 col-lg-6">
+																<!--begin::Ribbon wrapper 1-->
+																<div
+																	class="overflow-hidden position-relative card-rounded shadow-sm mb-5">
+																	<!--begin::Ribbon-->
+																	<div
+																		class="ribbon ribbon-triangle ribbon-top-start border-success">
+																		<!--begin::Ribbon icon-->
+																		<div class="ribbon-icon mt-n6 ms-n6">
+																			<i
+																				class="bi bi-file-text fs-3 text-white"></i>
+																		</div>
+																		<!--end::Ribbon icon-->
+																	</div>
+																	<!--end::Ribbon-->
+
+																	<!--begin::Card-->
+																	<div class="card card-bordered ">
+																		<!--begin::Header-->
+																		<div
+																			class="card-header ribbon ribbon-top ribbon-vertical bg-secondary">
+																			<div class="card-title">Dokumen BAPP</div>
+																		</div>
+																		<!--end::Header-->
+
+																		<!--begin::Body-->
+																		<div class="card-body pt-0">
+
+																			<div class="konten_card">
+
+																				<div class="custom-field">
+																					<h1>
+																						<span>
+																							Termin 1
+																						</span>
+																					</h1>
+																					<div class="row row-cols-2">
+																						<div class="col">
+																							<ul
+																								class="list-group list-group-flush p-0">
+																								<span
+																									class=" text-dark fw-bolder fs-5">No
+																									Dokumen BAPP
+																								</span>
+																								<li
+																									class="d-flex align-items-center py-2 list-group-item">
+																									<span
+																										class="bullet bullet-vertical me-5 bg-primary"></span>
+																									12/BUA.7/SK/05/2022
+																								</li>
+																							</ul>
+																						</div>
+																						<div class="col">
+																							<ul
+																								class="list-group list-group-flush p-0">
+																								<span
+																									class=" text-dark fw-bolder fs-5">Tanggal
+																									Dokumen BAPP</span>
+																								<li
+																									class="d-flex align-items-center py-2 list-group-item">
+																									<span
+																										class="bullet bullet-vertical me-5 bg-primary"></span>
+																									02 Juni 2022
+																								</li>
+																							</ul>
+																						</div>
+																						<div class="col">
+																							<ul
+																								class="list-group list-group-flush p-0">
+																								<span
+																									class=" text-dark fw-bolder fs-5">File
+																									Dokumen BAPP</span>
+																								<li
+																									class="d-flex align-items-center py-2 list-group-item">
+																									<span
+																										class="bullet bullet-vertical me-5 bg-primary"></span><a
+																										href="#"
+																										data-bs-toggle="modal"
+																										data-bs-target="#modalviewdokumen"
+																										data-bs-toggle="tooltip"
+																										data-bs-custom-class="tooltip-dark"
+																										data-bs-placement="left"
+																										title="Klik Untuk Preview"><i
+																											class="bi bi-file-pdf fs-4">
+																										</i>Nama File
+																										BAPP</a>
+																								</li>
+																							</ul>
+																						</div>
+																						<div class="col pt-3"> <button
+																								type="button"
+																								class="accs btn btn-warning btn-hover-rise bg-dark"
+																								data-bs-toggle="modal"
+																								data-bs-target="#modal"
+																								title="Dokumen BAPP"
+																								name="bapp">
+																								<i
+																									class="bi bi-pencil-square"></i>
+																								Edit Data BAPP
+																							</button></div>
+																					</div>
+																				</div>
+
+																			</div>
+
+																			<div class="tambahdata text-center">
+																				<button type="button"
+																					class="accs btn btn-success btn-hover-rise bg-dark"
+																					data-bs-toggle="modal"
+																					data-bs-target="#modal"
+																					title="Termin BAPP"
+																					name="terminbapp">
+																					<i
+																						class=" bi bi-plus-circle-dotted"></i>
+																					Tambah Data Termin BAPP
+																				</button>
+																			</div>
+																			<br>
+																			<div class="text-center">
+																				<p>
+																					Dokumen BAPP Belum tersedia, Harap
+																					isi data sesuai dokumen terkait
+																				</p>
+																				<button type="button"
+																					class="accs btn btn-success btn-hover-rise bg-dark"
+																					data-bs-toggle="modal"
+																					data-bs-target="#modal"
+																					title="Dokumen BAPP" name="BAPP">
+																					<i
+																						class=" bi bi-plus-circle-dotted"></i>
+																					Tambah Data BAPP
+																				</button>
+																			</div>
+																		</div>
+																		<!--end::Body-->
+																	</div>
+																	<!--end::Card-->
+
+																</div>
+																<!--end::Ribbon wrapper 1-->
+															</div>
+														</div>
+														<div class="row row-cols-1">
+															<div class="col">
+																<!--begin::Ribbon wrapper 1-->
+																<div
+																	class="overflow-hidden position-relative card-rounded shadow-sm mb-5">
+																	<!--begin::Ribbon-->
+																	<div
+																		class="ribbon ribbon-triangle ribbon-top-start border-success">
+																		<!--begin::Ribbon icon-->
+																		<div class="ribbon-icon mt-n6 ms-n6">
+																			<i
+																				class="bi bi-file-text fs-3 text-white"></i>
+																		</div>
+																		<!--end::Ribbon icon-->
+																	</div>
+																	<!--end::Ribbon-->
+
+																	<!--begin::Card-->
+																	<div class="card card-bordered ">
+																		<!--begin::Header-->
+																		<div
+																			class="card-header ribbon ribbon-top ribbon-vertical bg-secondary">
+																			<div class="card-title">Dokumen BAST</div>
+																		</div>
+																		<!--end::Header-->
+
+																		<!--begin::Body-->
+																		<div class="card-body pt-0">
+
+																			<div class="konten_card">
+
+																				<div class="custom-field">
+																					<h1>
+																						<span>
+																							Termin 1
+																						</span>
+																					</h1>
+																					<div class="row row-cols-4">
+																						<div class="col">
+																							<ul
+																								class="list-group list-group-flush p-0">
+																								<span
+																									class=" text-dark fw-bolder fs-5">No
+																									Dokumen BAST
+																								</span>
+																								<li
+																									class="d-flex align-items-center py-2 list-group-item">
+																									<span
+																										class="bullet bullet-vertical me-5 bg-primary"></span>
+																									12/BUA.7/SK/05/2022
+																								</li>
+																							</ul>
+																						</div>
+																						<div class="col">
+																							<ul
+																								class="list-group list-group-flush p-0">
+																								<span
+																									class=" text-dark fw-bolder fs-5">Tanggal
+																									Dokumen BAST</span>
+																								<li
+																									class="d-flex align-items-center py-2 list-group-item">
+																									<span
+																										class="bullet bullet-vertical me-5 bg-primary"></span>
+																									02 Juni 2022
+																								</li>
+																							</ul>
+																						</div>
+																						<div class="col">
+																							<ul
+																								class="list-group list-group-flush p-0">
+																								<span
+																									class=" text-dark fw-bolder fs-5">File
+																									Dokumen BAST</span>
+																								<li
+																									class="d-flex align-items-center py-2 list-group-item">
+																									<span
+																										class="bullet bullet-vertical me-5 bg-primary"></span><a
+																										href="#"
+																										data-bs-toggle="modal"
+																										data-bs-target="#modalviewdokumen"
+																										data-bs-toggle="tooltip"
+																										data-bs-custom-class="tooltip-dark"
+																										data-bs-placement="left"
+																										title="Klik Untuk Preview"><i
+																											class="bi bi-file-pdf fs-4">
+																										</i>Nama File
+																										BAST</a>
+																								</li>
+																							</ul>
+																						</div>
+																						<div class="col pt-3"> <button
+																								type="button"
+																								class="accs btn btn-warning btn-hover-rise bg-dark"
+																								data-bs-toggle="modal"
+																								data-bs-target="#modal"
+																								title="Dokumen BAST"
+																								name="bast">
+																								<i
+																									class="bi bi-pencil-square"></i>
+																								Edit Data BAST
+																							</button></div>
+																					</div>
+																				</div>
+
+																			</div>
+
+																			<div class="tambahdata text-center">
+																				<button type="button"
+																					class="accs btn btn-success btn-hover-rise bg-dark"
+																					data-bs-toggle="modal"
+																					data-bs-target="#modal"
+																					title="Termin BAST"
+																					name="terminbast">
+																					<i
+																						class=" bi bi-plus-circle-dotted"></i>
+																					Tambah Data Termin BAST
+																				</button>
+																			</div>
+																			<br>
 																			<div class="text-center">
 																				<p>
 																					Dokumen BAST Belum tersedia, Harap
@@ -653,7 +1164,7 @@ License: For each use you must have a valid license purchased only from above li
 																					class="accs btn btn-success btn-hover-rise bg-dark"
 																					data-bs-toggle="modal"
 																					data-bs-target="#modal"
-																					title="Dokumen BAST" name="bast">
+																					title="Dokumen BAST" name="BAST">
 																					<i
 																						class=" bi bi-plus-circle-dotted"></i>
 																					Tambah Data BAST
@@ -667,293 +1178,628 @@ License: For each use you must have a valid license purchased only from above li
 																</div>
 																<!--end::Ribbon wrapper 1-->
 															</div>
-
-
 														</div>
 													</div>
 
 													<div class="tab-pane fade py-3" id="kt_tab_pane_6" role="tabpanel">
-														Sint sit mollit irure quis est nostrud cillum consequat
-														Lorem esse
-														do quis dolor esse fugiat sunt do.
+														<div class="row row-cols-1">
+															<div class="col">
+																<!--begin::Ribbon wrapper 1-->
+																<div
+																	class="overflow-hidden position-relative card-rounded shadow-sm mb-5 ">
+
+
+																	<!--begin::Card-->
+																	<div class="card card-bordered ">
+																		<!--begin::Header-->
+																		<div
+																			class="card-header ribbon ribbon-top bg-info">
+																			<div class="ribbon-label bg-black p-3"><i
+																					class="bi bi-percent fs-2 text-light"></i>
+																			</div>
+																			<div class="card-title text-light">Progress
+																				Realisasi
+																				Fisik</div>
+																		</div>
+																		<!--end::Header-->
+
+																		<!--begin::Body-->
+																		<div class="card-body pt-5">
+																			<div class="progress" style="height: 20px;">
+																				<div class="progress-bar progress-bar-striped progress-bar-animated fs-3"
+																					role="progressbar"
+																					style="width: 100%;"
+																					aria-valuenow="100"
+																					aria-valuemin="0"
+																					aria-valuemax="100">100%
+																				</div>
+																			</div>
+																		</div>
+																		<!--end::Body-->
+																	</div>
+																	<!--end::Card-->
+
+																</div>
+																<!--end::Ribbon wrapper 1-->
+															</div>
+														</div>
+														<div class="row row-cols-1 mt-5">
+															<div class="col">
+																<div
+																	class="overflow-hidden position-relative card-rounded shadow-sm mb-5">
+																	<!--begin::Ribbon-->
+																	<div
+																		class="ribbon ribbon-triangle ribbon-top-start border-primary">
+																		<!--begin::Ribbon icon-->
+																		<div class="ribbon-icon mt-n6 ms-n6">
+																			<i
+																				class="bi bi-building fs-3 text-white"></i>
+																		</div>
+																		<!--end::Ribbon icon-->
+																	</div>
+																	<!--end::Ribbon-->
+
+																	<!--begin::Card-->
+																	<div class="card card-bordered ">
+																		<!--begin::Header-->
+																		<div
+																			class="card-header ribbon ribbon-top ribbon-vertical bg-secondary">
+																			<div class="card-title">Laporan Realisasi
+																				Fisik</div>
+																		</div>
+																		<!--end::Header-->
+
+																		<!--begin::Body-->
+																		<div class="card-body pt-5">
+																			<div class="konten_card">
+																				<div class="col-2 align-items-end">
+																					<button type="button"
+																						class="fisik btn btn-success btn-hover-rise bg-dark"
+																						data-bs-toggle="modal"
+																						data-bs-target="#modalfisik"
+																						title="Tambah Laporan Realisasi Fisik"
+																						name="laporan_realisasi">
+																						<i
+																							class=" bi bi-plus-circle-dotted"></i>
+																						Tambah Laporan
+																					</button>
+																				</div>
+																				<div class="row border-1 rounded  py-4"
+																					style="padding:10px;">
+																					<div
+																						class="table-responsive rounded">
+																						<table id="datatable"
+																							class="table table-rounded  border gy-6 gs-6 dataTable  table-hover table-row-dashed ">
+																							<thead>
+																								<tr class="text-start text-dark fw-bolder fs-7 text-uppercase gs-0 bg-light-dark"
+																									style="vertical-align: middle;">
+																									<th width="5%">No
+																									</th>
+																									<th width="15%">
+																										Tanggal
+																										Laporan</th>
+																									<th width="35%">
+																										Deskripsi
+																										Laporan
+																									</th>
+																									<th width="10%">
+																										Progress
+																										Pekerjaan</th>
+																									<th width="20%">File
+																										Dokumen</th>
+																									<th width="15%">
+																										Actions
+																									</th>
+																								</tr>
+																							</thead>
+																							<tbody>
+																								<tr>
+																									<td width="5%">
+																										1.
+																									</td>
+																									<td width="15%">
+																										22/11/2022
+																									</td>
+																									<td width="35%"
+																										style="text-align: justify;">
+																										Lorem ipsum,
+																										dolor
+																										sit amet
+																										consectetur
+																										adipisicing
+																										elit. At,
+																										inventore.
+																										Delectus
+																										perferendis,
+																										esse
+																										quae
+																										voluptate
+																										deleniti
+																										perspiciatis
+																										vero
+																										nobis
+																										voluptatibus id
+																										quisquam! Ullam
+																										expedita
+																										quisquam
+																										modi magnam
+																										accusantium
+																										blanditiis nemo?
+																									</td>
+																									<td width="10%">
+																										5%
+																									</td>
+																									<td width="20%">
+																										<a href="#"
+																											data-bs-toggle="modal"
+																											data-bs-target="#modalviewdokumen"
+																											data-bs-toggle="tooltip"
+																											data-bs-custom-class="tooltip-dark"
+																											data-bs-placement="left"
+																											title="Klik Untuk Preview"><i
+																												class="bi bi-file-pdf fs-4">
+																											</i>File
+																											Dokumen
+																											Bukti
+																											Fisik</a>
+
+																									</td>
+																									<td width="15%">
+																										<button
+																											type="button"
+																											class="fisik btn btn-warning btn-hover-rise bg-dark"
+																											data-bs-toggle="modal"
+																											data-bs-target="#modalfisik"
+																											title="Edit Laporan Realisasi Fisik"
+																											name="realisasifisik">
+																											<i
+																												class="bi bi-pencil-square"></i>
+																											Edit
+																										</button>
+																									</td>
+																								</tr>
+
+																							</tbody>
+																						</table>
+																					</div>
+																				</div>
+																			</div>
+
+																			<div class="text-center">
+																				<p>
+																					Dokumen Laporan Realisasi fisik
+																					Belum
+																					tersedia,
+																					Harap
+																					isi data sesuai dokumen terkait
+																				</p>
+																				<button type="button"
+																					class="fisik btn btn-success btn-hover-rise bg-dark"
+																					data-bs-toggle="modal"
+																					data-bs-target="#modalfisik"
+																					title="Tambah Laporan Realisasi Fisik"
+																					name="laporan_realisasi">
+																					<i
+																						class=" bi bi-plus-circle-dotted"></i>
+																					Tambah Dokumen Laporan Realisasi
+																					Fisik
+																				</button>
+																			</div>
+																			<!--end::Body-->
+																		</div>
+																		<!--end::Card-->
+
+																	</div>
+																</div>
+
+															</div>
+														</div>
+
+
 													</div>
-
-
 												</div>
+												<!--end::end card body-->
 											</div>
-											<!--end::end card body-->
+											<!--end::row-->
 										</div>
 										<!--end::row-->
 									</div>
-									<!--end::row-->
-								</div>
 
-								<!--Begin Input/Edit Modal-->
-								<div class=" modal fade" id="modal" tabindex="-1" data-bs-backdrop="static"
-									aria-labelledby="exampleModalLabel" aria-hidden="true">
-									<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-										<div class="modal-content">
-											<div class="modal-header">
-												<h5 id="accType" class="modal-title">
-													Modal Title
-												</h5>
+									<!--Begin Input/Edit Modal BAP-->
+									<div class=" modal fade" id="modalbap" tabindex="-1" data-bs-backdrop="static"
+										aria-labelledby="exampleModalLabel" aria-hidden="true">
+										<div
+											class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 id="accTypebap" class="modal-title">
+														Modal Title
+													</h5>
+												</div>
+												<form action="">
+													<div class="modal-body">
+														<div class="form-group">
+															<input id="accTypesbap" type="hidden" name="identifier"
+																class="form-control" value=" ">
+														</div>
+														<div class="form-group my-2">
+															<label for="name" class="form-label">Nomor
+																Dokumen</label>
+															<input type="text" class="form-control "
+																placeholder="Masukan Nomor Dokumen" name="no"
+																required />
+														</div>
+														<div class="form-group my-2">
+															<label for="name" class="form-label">Tanggal
+																Dokumen</label>
+															<input class="form-control" placeholder="Pilih Tanggal"
+																id="kt_datepicker_2" name="tanggal" />
+														</div>
+														<div class="form-group my-2">
+															<label for="name" class="form-label">Nilai
+																Pembayaran</label>
+															<div class="input-group">
+																<span class="input-group-text">Rp.</span>
+																<input type="text" id="tanpa-rupiah"
+																	class="form-control form-control-solid"
+																	placeholder="Masukan Nilai Pembayaran"
+																	name="nilai_pembayaran" required />
+																<!--end::Input-->
+															</div>
+														</div>
+														<div class="form-group my-2">
+															<label for="formFile" class="form-label">Upload
+																file
+																Dokumen</label>
+															<input class="form-control" type="file" id="formFile">
+														</div>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-secondary"
+															data-bs-dismiss="modal">Close</button>
+														<button type="submit" class="btn btn-primary"
+															id="submitdigisign">Simpan</button>
+													</div>
+												</form>
 											</div>
-											<form action="">
+										</div>
+									</div>
+									<!--End Input/Edit Modal-->
+
+									<!--Begin Input/Edit Modal BAPP - BAST-->
+									<div class=" modal fade" id="modal" tabindex="-1" data-bs-backdrop="static"
+										aria-labelledby="exampleModalLabel" aria-hidden="true">
+										<div
+											class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 id="accType" class="modal-title">
+														Modal Title
+													</h5>
+												</div>
+												<form action="">
+													<div class="modal-body">
+														<div class="form-group">
+															<input id="accTypes" type="hidden" name="identifier"
+																class="form-control" value=" ">
+														</div>
+														<div class="form-group my-2">
+															<label for="name" class="form-label">Nomor
+																Dokumen</label>
+															<input type="text" class="form-control "
+																placeholder="Masukan Nomor Dokumen" name="no"
+																required />
+														</div>
+														<div class="form-group my-2">
+															<label for="name" class="form-label">Tanggal
+																Dokumen</label>
+															<input class="form-control" placeholder="Pilih Tanggal"
+																id="kt_datepicker_2" name="tanggal" />
+														</div>
+														<div class="form-group my-2">
+															<label for="formFile" class="form-label">Upload
+																file
+																Dokumen</label>
+															<input class="form-control" type="file" id="formFile">
+														</div>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-secondary"
+															data-bs-dismiss="modal">Close</button>
+														<button type="submit" class="btn btn-primary"
+															id="submitdigisign">Simpan</button>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+									<!--End Input/Edit Modal-->
+
+									<!--Begin Input/Edit Modal realisasi fisik-->
+									<div class=" modal fade" id="modalfisik" tabindex="-1" data-bs-backdrop="static"
+										aria-labelledby="exampleModalLabel" aria-hidden="true">
+										<div
+											class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 id="accTypefisik" class="modal-title">
+														Modal Title
+													</h5>
+												</div>
+												<form action="">
+													<div class="modal-body">
+														<div class="form-group">
+															<input id="accTypesfisik" type="hidden" name="identifier"
+																class="form-control" value=" ">
+														</div>
+
+														<div class="form-group my-2">
+															<label for="name" class="form-label">Tanggal
+																Laporan</label>
+															<input class="form-control" placeholder="Pilih Tanggal"
+																id="kt_datepicker_3" name="tanggal" />
+														</div>
+														<div class="form-group my-2">
+															<label for="name" class="form-label">Deskripsi
+																Laporan</label>
+															<textarea class="form-control" aria-label="With textarea"
+																placeholder="Masukan Deskripsi" required></textarea>
+														</div>
+														<div class="form-group my-2">
+															<label for="name" class="form-label">Progress
+																Pekerjaan</label>
+															<div class="input-group mb-5">
+																<input type="text" class="form-control"
+																	placeholder="Masukan Progress Pekerjaan"
+																	aria-label="Progress Pekerjaan"
+																	aria-describedby="basic-addon2" />
+																<span class="input-group-text fs-2"
+																	id="basic-addon2">%</span>
+															</div>
+														</div>
+														<div class="form-group my-2">
+															<label for="formFile" class="form-label">Upload
+																file
+																Dokumen</label>
+															<input class="form-control" type="file" id="formFile">
+														</div>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-secondary"
+															data-bs-dismiss="modal">Close</button>
+														<button type="submit" class="btn btn-primary"
+															id="submitdigisign">Simpan</button>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+									<!--End Input/Edit Modal-->
+
+									<!--Begin View Modal-->
+									<div class="modal fade" tabindex="-1" id="modalviewdokumen">
+										<div class="modal-dialog modal-xl">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title">Preview
+														Dokumen</h5>
+													<!--begin::Close-->
+													<div class="btn btn-icon btn-sm btn-active-light-primary ms-2"
+														data-bs-dismiss="modal" aria-label="Close">
+														<span class="svg-icon svg-icon-2x"></span>
+													</div>
+													<!--end::Close-->
+												</div>
 												<div class="modal-body">
-													<div class="form-group">
-														<input id="accTypes" type="hidden" name="identifier"
-															class="form-control" value=" ">
-													</div>
-													<div class="form-group my-2">
-														<label for="name" class="form-label">Nomor
-															Dokumen</label>
-														<input type="text" class="form-control "
-															placeholder="Masukan Nomor Dokumen" name="no" required />
-													</div>
-													<div class="form-group my-2">
-														<label for="name" class="form-label">Tanggal
-															Dokumen</label>
-														<input class="form-control" placeholder="Pilih Tanggal"
-															id="kt_datepicker_2" name="tanggal" />
-													</div>
-													<div class="form-group my-2">
-														<label for="formFile" class="form-label">Upload
-															file
-															Dokumen</label>
-														<input class="form-control" type="file" id="formFile">
-													</div>
+													<embed
+														src="http://simpraja.id/pdf/upload/1645004535_0f191b8cb54048bb09fe.pdf"
+														width="100%" height="600px" />
 												</div>
 												<div class="modal-footer">
-													<button type="button" class="btn btn-secondary"
+													<button type="button" class="btn btn-light"
 														data-bs-dismiss="modal">Close</button>
-													<button type="submit" class="btn btn-primary"
-														id="submitdigisign">Simpan</button>
+													<button class="btn bg-primary text-light"><i
+															class="fa fa-download text-light"></i>
+														Download</button>
 												</div>
-											</form>
-										</div>
-									</div>
-								</div>
-								<!--End Input/Edit Modal-->
-
-								<!--Begin View Modal-->
-								<div class="modal fade" tabindex="-1" id="modalviewdokumen">
-									<div class="modal-dialog modal-xl">
-										<div class="modal-content">
-											<div class="modal-header">
-												<h5 class="modal-title">Preview
-													Dokumen</h5>
-												<!--begin::Close-->
-												<div class="btn btn-icon btn-sm btn-active-light-primary ms-2"
-													data-bs-dismiss="modal" aria-label="Close">
-													<span class="svg-icon svg-icon-2x"></span>
-												</div>
-												<!--end::Close-->
-											</div>
-											<div class="modal-body">
-												<embed
-													src="http://simpraja.id/pdf/upload/1645004535_0f191b8cb54048bb09fe.pdf"
-													width="100%" height="600px" />
-											</div>
-											<div class="modal-footer">
-												<button type="button" class="btn btn-light"
-													data-bs-dismiss="modal">Close</button>
-												<button class="btn bg-primary text-light"><i
-														class="fa fa-download text-light"></i>
-													Download</button>
 											</div>
 										</div>
 									</div>
+									<!--End View Modal-->
+
+
 								</div>
-								<!--End View Modal-->
-
-
 							</div>
-						</div>
 
 
 
-						<!--end::Post Content Hereee -->
-						<!--begin::Footer-->
-						<div class="footer py-4 d-flex flex-column flex-md-row flex-stack" id="kt_footer">
-							<!--begin::Copyright-->
-							<div class="text-dark order-2 order-md-1">
-								<span class="text-muted fw-bold me-1">2022©</span>
-								<a href="https://mahkamahagung.go.id" target="_blank"
-									class="text-gray-800 text-hover-primary">Mahkamah Agung Republik Indonesia</a>
+							<!--end::Post Content Hereee -->
+							<!--begin::Footer-->
+							<div class="footer py-4 d-flex flex-column flex-md-row flex-stack" id="kt_footer">
+								<!--begin::Copyright-->
+								<div class="text-dark order-2 order-md-1">
+									<span class="text-muted fw-bold me-1">2022©</span>
+									<a href="https://mahkamahagung.go.id" target="_blank"
+										class="text-gray-800 text-hover-primary">Mahkamah Agung Republik Indonesia</a>
+								</div>
+								<!--end::Copyright-->
+								<!--begin::Menu-->
+								<ul class="menu menu-gray-600 menu-hover-primary fw-bold order-1">
+									<li class="menu-item">
+										<a href="https://1.envato.market/EA4JP" target="_blank"
+											class="menu-link px-2">Loadtime
+											: 0,01 ms
+										</a>
+									</li>
+								</ul>
+								<!--end::Menu-->
 							</div>
-							<!--end::Copyright-->
-							<!--begin::Menu-->
-							<ul class="menu menu-gray-600 menu-hover-primary fw-bold order-1">
-								<li class="menu-item">
-									<a href="https://1.envato.market/EA4JP" target="_blank"
-										class="menu-link px-2">Loadtime
-										: 0,01 ms
-									</a>
-								</li>
-							</ul>
-							<!--end::Menu-->
+							<!--end::Footer-->
 						</div>
-						<!--end::Footer-->
+						<!--end::Container Content-->
 					</div>
-					<!--end::Container Content-->
+					<!--end::Content wrapper-->
 				</div>
-				<!--end::Content wrapper-->
+				<!--end::Wrapper-->
 			</div>
-			<!--end::Wrapper-->
+			<!--end::Page-->
 		</div>
-		<!--end::Page-->
-	</div>
-	<!--end::Root-->
-	<!--begin::Scrolltop-->
-	<div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
-		<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
-		<span class="svg-icon">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-				<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)"
-					fill="black" />
-				<path
-					d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z"
-					fill="black" />
-			</svg>
-		</span>
-		<!--end::Svg Icon-->
-	</div>
-	<!--end::Scrolltop-->
-	<!--begin::Javascript-->
-	<script>var hostUrl = "assets/";</script>
-	<!--begin::Global Javascript Bundle(used by all pages)-->
-	<script src="assets/plugins/global/plugins.bundle.js"></script>
-	<script src="assets/js/scripts.bundle.js"></script>
-	<!--end::Global Javascript Bundle-->
-	<!--begin::Page Vendors Javascript(used by this page)-->
-	<script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
-	<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
-	<script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.11.4/datatables.min.js"></script>
-	<script src="assets/plugins/custom/formrepeater/formrepeater.bundle.js"></script>
-	<script src="assets/js/custom/apps/ecommerce/catalog/save-category.js"></script>
-	<!--end::Page Vendors Javascript-->
-	<!--begin::Page Custom Javascript(used by this page)-->
-	<script src="assets/js/widgets.bundle.js"></script>
-	<script src="assets/js/custom/widgets.js"></script>
-	<script src="assets/js/custom/apps/chat/chat.js"></script>
-	<script src="assets/js/custom/utilities/modals/create-app.js"></script>
-	<script src="assets/js/custom/utilities/modals/create-campaign.js"></script>
-	<script src="assets/js/custom/utilities/modals/users-search.js"></script>
-	<script>$(document).ready(function () {
-			$('#daftarusulanpokja').DataTable({
-				"columnDefs": [
-				]
+		<!--end::Root-->
+		<!--begin::Scrolltop-->
+		<div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
+			<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+			<span class="svg-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+					<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)"
+						fill="black" />
+					<path
+						d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z"
+						fill="black" />
+				</svg>
+			</span>
+			<!--end::Svg Icon-->
+		</div>
+		<!--end::Scrolltop-->
+		<!--begin::Javascript-->
+		<script>var hostUrl = "assets/";</script>
+		<!--begin::Global Javascript Bundle(used by all pages)-->
+		<script src="assets/plugins/global/plugins.bundle.js"></script>
+		<script src="assets/js/scripts.bundle.js"></script>
+		<!--end::Global Javascript Bundle-->
+		<!--begin::Page Vendors Javascript(used by this page)-->
+		<script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+		<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.11.4/datatables.min.js"></script>
+		<script src="assets/plugins/custom/formrepeater/formrepeater.bundle.js"></script>
+		<script src="assets/js/custom/apps/ecommerce/catalog/save-category.js"></script>
+		<!--end::Page Vendors Javascript-->
+		<!--begin::Page Custom Javascript(used by this page)-->
+		<script src="assets/js/widgets.bundle.js"></script>
+		<script src="assets/js/custom/widgets.js"></script>
+		<script src="assets/js/custom/apps/chat/chat.js"></script>
+		<script src="assets/js/custom/utilities/modals/create-app.js"></script>
+		<script src="assets/js/custom/utilities/modals/create-campaign.js"></script>
+		<script src="assets/js/custom/utilities/modals/users-search.js"></script>
+		<script>$(document).ready(function () {
+				$('#datatable').DataTable({
+					"columnDefs": [
+					]
+				});
 			});
-		});
-	</script>
-	<script>
-		const btn = document.getElementById("btn");
-		const input = document.getElementById("myInput");
+		</script>
+		</script>
+		<script>
+			const btn = document.getElementById("btn");
+			const input = document.getElementById("myInput");
 
-		const testFunc = function () {
-			let inputValue = input.value;
-			var url = "https://sikep.mahkamahagung.go.id/api-pro/v1/training/pegawai/" + input.value;
+			const testFunc = function () {
+				let inputValue = input.value;
+				var url = "https://sikep.mahkamahagung.go.id/api-pro/v1/training/pegawai/" + input.value;
 
-			var xhr = new XMLHttpRequest();
-			xhr.open("GET", url);
+				var xhr = new XMLHttpRequest();
+				xhr.open("GET", url);
 
-			xhr.setRequestHeader("Authorization", "Bearer uW7FYKGePxUBPb5jgtLCsTC3efKwNfl2HV1UdTxz");
+				xhr.setRequestHeader("Authorization", "Bearer uW7FYKGePxUBPb5jgtLCsTC3efKwNfl2HV1UdTxz");
 
-			xhr.onreadystatechange = function () {
-				if (xhr.readyState === 4) {
-					//console.log(xhr.status);
-					//console.log(xhr.responseText);
-					let sikep = JSON.parse(xhr.responseText);
-					console.log(sikep.data);
-					document.getElementById("nama_ketua").value = sikep.data.gelar_depan + " " + sikep.data.nama_lengkap + ", " + sikep.data.gelar_belakang;
-					document.getElementById("satuankerjaketua").value = sikep.data.satker;
-					document.getElementById("jabatanketua").value = sikep.data.jabatan;
+				xhr.onreadystatechange = function () {
+					if (xhr.readyState === 4) {
+						//console.log(xhr.status);
+						//console.log(xhr.responseText);
+						let sikep = JSON.parse(xhr.responseText);
+						console.log(sikep.data);
+						document.getElementById("nama_ketua").value = sikep.data.gelar_depan + " " + sikep.data.nama_lengkap + ", " + sikep.data.gelar_belakang;
+						document.getElementById("satuankerjaketua").value = sikep.data.satker;
+						document.getElementById("jabatanketua").value = sikep.data.jabatan;
+					}
+				};
+
+				xhr.send();
+			}
+		</script>
+		<script>
+			$('.accs').click(function () {
+				$('#accType').innerHTML = "";
+				$('#accType').text($(this).attr('title'));
+				$('#accTypes').val($(this).attr('name'));
+				//$("#regModal").modal('show');
+				$('#accType').innerHTML = "";
+			});
+		</script>
+		<script>
+			$('.wedus').click(function () {
+				$('#accTypebap').innerHTML = "";
+				$('#accTypebap').text($(this).attr('title'));
+				$('#accTypesbap').val($(this).attr('name'));
+				//$("#regModal").modal('show');
+				$('#accTypebap').innerHTML = "";
+			});
+		</script>
+		<script>
+			$('.fisik').click(function () {
+				$('#accTypefisik').innerHTML = "";
+				$('#accTypefisik').text($(this).attr('title'));
+				$('#accTypesfisik').val($(this).attr('name'));
+				//$("#regModal").modal('show');
+				$('#accTypefisik').innerHTML = "";
+			});
+		</script>
+		<script>
+			$("#kt_datepicker_2").flatpickr({
+				altInput: true,
+				altFormat: "j F Y",
+				dateFormat: "Y-m-d",
+			});
+		</script>
+		<script>
+			$("#kt_datepicker_3").flatpickr({
+				altInput: true,
+				altFormat: "j F Y",
+				dateFormat: "Y-m-d",
+			});
+		</script>
+		<script>
+			let select = document.getElementById('dropdownYear');
+			let currYear = new Date().getFullYear();
+			let futureYear = currYear + 3;
+			let pastYear = currYear - 3;
+			for (let year = pastYear; year <= futureYear; year++) {
+				let option = document.createElement('option');
+				option.setAttribute('value', year);
+				if (year === currYear) {
+					option.setAttribute('selected', true);
 				}
-			};
-
-			xhr.send();
-		}
-	</script>
-	<script>
-		$('.accs').click(function () {
-			$('#accType').innerHTML = "";
-			$('#accType').text($(this).attr('title'));
-			$('#accTypes').val($(this).attr('name'));
-			//$("#regModal").modal('show');
-			$('#accType').innerHTML = "";
-		});
-	</script>
-	<script>
-		$("#kt_datepicker_2").flatpickr({
-			altInput: true,
-			altFormat: "j F Y",
-			dateFormat: "Y-m-d",
-		});
-	</script>
-	<script>
-		let select = document.getElementById('dropdownYear');
-		let currYear = new Date().getFullYear();
-		let futureYear = currYear + 3;
-		let pastYear = currYear - 3;
-		for (let year = pastYear; year <= futureYear; year++) {
-			let option = document.createElement('option');
-			option.setAttribute('value', year);
-			if (year === currYear) {
-				option.setAttribute('selected', true);
+				option.innerHTML = year;
+				select.appendChild(option);
 			}
-			option.innerHTML = year;
-			select.appendChild(option);
-		}
-	</script>
-	<script>
-		/* Tanpa Rupiah */
-		var tanpa_rupiah = document.getElementById('tanpa-rupiah');
-		tanpa_rupiah.addEventListener('keyup', function (e) {
-			tanpa_rupiah.value = formatRupiah(this.value);
-		});
+		</script>
+		<script>
+			/* Tanpa Rupiah */
+			var tanpa_rupiah = document.getElementById('tanpa-rupiah');
+			tanpa_rupiah.addEventListener('keyup', function (e) {
+				tanpa_rupiah.value = formatRupiah(this.value);
+			});
 
 
-		/* Fungsi */
-		function formatRupiah(angka, prefix) {
-			var number_string = angka.replace(/[^,\d]/g, '').toString(),
-				split = number_string.split(','),
-				sisa = split[0].length % 3,
-				rupiah = split[0].substr(0, sisa),
-				ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+			/* Fungsi */
+			function formatRupiah(angka, prefix) {
+				var number_string = angka.replace(/[^,\d]/g, '').toString(),
+					split = number_string.split(','),
+					sisa = split[0].length % 3,
+					rupiah = split[0].substr(0, sisa),
+					ribuan = split[0].substr(sisa).match(/\d{3}/gi);
 
-			if (ribuan) {
-				separator = sisa ? '.' : '';
-				rupiah += separator + ribuan.join('.');
+				if (ribuan) {
+					separator = sisa ? '.' : '';
+					rupiah += separator + ribuan.join('.');
+				}
+
+				rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+				return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
 			}
+		</script>
 
-			rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
-			return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
-		}
-	</script>
-	<script>
-		// Stepper lement
-		var element = document.querySelector("#kt_stepper_example_clickable");
-
-		// Initialize Stepper
-		var stepper = new KTStepper(element);
-
-		// Handle navigation click
-		stepper.on("kt.stepper.click", function (stepper) {
-			stepper.goTo(stepper.getClickedStepIndex()); // go to clicked step
-		});
-
-		// Handle next step
-		stepper.on("kt.stepper.next", function (stepper) {
-			stepper.goNext(); // go next step
-		});
-
-		// Handle previous step
-		stepper.on("kt.stepper.previous", function (stepper) {
-			stepper.goPrevious(); // go previous step
-		});
-	</script>
-	<!--end::Page Custom Javascript-->
-	<!--end::Javascript-->
+		<!--end::Page Custom Javascript-->
+		<!--end::Javascript-->
 </body>
 <!--end::Body-->
 
