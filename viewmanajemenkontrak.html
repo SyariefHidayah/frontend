@@ -848,7 +848,7 @@ License: For each use you must have a valid license purchased only from above li
 																						<button type="button"
 																							class="wedus btn btn-warning btn-hover-rise bg-dark"
 																							data-bs-toggle="modal"
-																							data-bs-target="#modalbap"
+																							data-bs-target="#modaleditbap"
 																							title="Dokumen BAP"
 																							name="bap">
 																							<i
@@ -987,8 +987,8 @@ License: For each use you must have a valid license purchased only from above li
 																								type="button"
 																								class="accs btn btn-warning btn-hover-rise bg-dark"
 																								data-bs-toggle="modal"
-																								data-bs-target="#modal"
-																								title="Dokumen BAPP"
+																								data-bs-target="#modaleditbappbast"
+																								title="Edit Dokumen BAPP"
 																								name="bapp">
 																								<i
 																									class="bi bi-pencil-square"></i>
@@ -1130,8 +1130,8 @@ License: For each use you must have a valid license purchased only from above li
 																								type="button"
 																								class="accs btn btn-warning btn-hover-rise bg-dark"
 																								data-bs-toggle="modal"
-																								data-bs-target="#modal"
-																								title="Dokumen BAST"
+																								data-bs-target="#modaleditbappbast"
+																								title="Edit Dokumen BAST"
 																								name="bast">
 																								<i
 																									class="bi bi-pencil-square"></i>
@@ -1349,7 +1349,7 @@ License: For each use you must have a valid license purchased only from above li
 																											type="button"
 																											class="fisik btn btn-warning btn-hover-rise bg-dark"
 																											data-bs-toggle="modal"
-																											data-bs-target="#modalfisik"
+																											data-bs-target="#modaleditfisik"
 																											title="Edit Laporan Realisasi Fisik"
 																											name="realisasifisik">
 																											<i
@@ -1465,8 +1465,93 @@ License: For each use you must have a valid license purchased only from above li
 										</div>
 									</div>
 									<!--End Input/Edit Modal-->
+									<!--Begin Input/Edit Modal BAP-->
+									<div class=" modal fade" id="modaleditbap" tabindex="-1" data-bs-backdrop="static"
+										aria-labelledby="exampleModalLabel" aria-hidden="true">
+										<div
+											class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 id="accTypebap" class="modal-title">
+														Modal Title
+													</h5>
+												</div>
+												<form action="">
+													<div class="modal-body">
+														<div class="form-group">
+															<input id="accTypesbap" type="hidden" name="identifier"
+																class="form-control" value=" ">
+														</div>
+														<div class="form-group my-2">
+															<label for="name" class="form-label">Nomor
+																Dokumen</label>
+															<input type="text" class="form-control "
+																placeholder="Masukan Nomor Dokumen" name="no"
+																required />
+														</div>
+														<div class="form-group my-2">
+															<label for="name" class="form-label">Tanggal
+																Dokumen</label>
+															<input class="form-control" placeholder="Pilih Tanggal"
+																id="kt_datepicker_2" name="tanggal" />
+														</div>
+														<div class="form-group my-2">
+															<label for="name" class="form-label">Nilai
+																Pembayaran</label>
+															<div class="input-group">
+																<span class="input-group-text">Rp.</span>
+																<input type="text" id="tanpa-rupiah"
+																	class="form-control form-control-solid"
+																	placeholder="Masukan Nilai Pembayaran"
+																	name="nilai_pembayaran" required />
+																<!--end::Input-->
+															</div>
+														</div>
+														<div class="form-group my-2">
+															<label for="formFile" class="form-label">Upload
+																file
+																Dokumen</label>
+															<div class="row">
+																<div class="col-3 col-sm-3 col-md-3 col-lg-2 ">
+																	<span class=" bg-primary"></span><a href="#"
+																		data-bs-toggle="modal"
+																		data-bs-target="#modalviewdokumen"
+																		data-bs-toggle="tooltip"
+																		data-bs-custom-class="tooltip-dark"
+																		data-bs-placement="left"
+																		title="Klik Untuk Preview"><i
+																			class="bi bi-file-pdf fs-4">
+																		</i>*Nama File </a>
+																</div>
+																<div
+																	class="col-9 col-sm-9 col-md-9 col-lg-10  form-check form-switch">
+																	<input class="form-check-input" type="checkbox"
+																		role="switch" id="switch-bap">
+																	<label class="form-check-label"
+																		for="switch-bap">Klik
+																		Untuk Mengubah
+																		File</label>
+																</div>
+															</div>
+															<div class="tambah-file-baru" style="display: none;">
+																<br>
+																<input class="form-control" type="file" id="formFile">
+															</div>
+														</div>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-secondary"
+															data-bs-dismiss="modal">Close</button>
+														<button type="submit" class="btn btn-primary"
+															id="simpanbap">Simpan</button>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+									<!--End Input/Edit Modal-->
 
-									<!--Begin Input/Edit Modal BAPP - BAST-->
+									<!--Begin Input Modal BAPP - BAST-->
 									<div class=" modal fade" id="modal" tabindex="-1" data-bs-backdrop="static"
 										aria-labelledby="exampleModalLabel" aria-hidden="true">
 										<div
@@ -1513,7 +1598,83 @@ License: For each use you must have a valid license purchased only from above li
 											</div>
 										</div>
 									</div>
-									<!--End Input/Edit Modal-->
+									<!--End Input Modal-->
+
+									<!--Begin Edit Modal BAPP - BAST-->
+									<div class=" modal fade" id="modaleditbappbast" tabindex="-1"
+										data-bs-backdrop="static" aria-labelledby="exampleModalLabel"
+										aria-hidden="true">
+										<div
+											class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 id="accType" class="modal-title">
+														Modal Title
+													</h5>
+												</div>
+												<form action="">
+													<div class="modal-body">
+														<div class="form-group">
+															<input id="accTypes" type="hidden" name="identifier"
+																class="form-control" value=" ">
+														</div>
+														<div class="form-group my-2">
+															<label for="name" class="form-label">Nomor
+																Dokumen</label>
+															<input type="text" class="form-control "
+																placeholder="Masukan Nomor Dokumen" name="no"
+																required />
+														</div>
+														<div class="form-group my-2">
+															<label for="name" class="form-label">Tanggal
+																Dokumen</label>
+															<input class="form-control" placeholder="Pilih Tanggal"
+																id="kt_datepicker_2" name="tanggal" />
+														</div>
+														<div class="form-group my-2">
+															<label for="formFile" class="form-label">Upload
+																file
+																Dokumen</label>
+															<div class="row">
+																<div class="col-3 col-sm-3 col-md-3 col-lg-2 ">
+																	<span class=" bg-primary"></span><a href="#"
+																		data-bs-toggle="modal"
+																		data-bs-target="#modalviewdokumen"
+																		data-bs-toggle="tooltip"
+																		data-bs-custom-class="tooltip-dark"
+																		data-bs-placement="left"
+																		title="Klik Untuk Preview"><i
+																			class="bi bi-file-pdf fs-4">
+																		</i>*Nama File </a>
+																</div>
+																<div
+																	class="col-9 col-sm-9 col-md-9 col-lg-10  form-check form-switch">
+																	<input class="form-check-input" type="checkbox"
+																		role="switch" id="switch-bappbast">
+																	<label class="form-check-label"
+																		for="switch-bappbast">Klik
+																		Untuk Mengubah
+																		File</label>
+																</div>
+															</div>
+															<div class="tambah-file-baru" style="display: none;">
+																<br>
+																<input class="form-control" type="file" id="formFile">
+															</div>
+														</div>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-secondary"
+															data-bs-dismiss="modal">Close</button>
+														<button type="submit" class="btn btn-primary"
+															id="simpanall">Simpan</button>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+									<!--End Input Modal-->
+
 
 									<!--Begin Input/Edit Modal realisasi fisik-->
 									<div class=" modal fade" id="modalfisik" tabindex="-1" data-bs-backdrop="static"
@@ -1562,6 +1723,92 @@ License: For each use you must have a valid license purchased only from above li
 																file
 																Dokumen</label>
 															<input class="form-control" type="file" id="formFile">
+														</div>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-secondary"
+															data-bs-dismiss="modal">Close</button>
+														<button type="submit" class="btn btn-primary"
+															id="simpanfisik">Simpan</button>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+									<!--End Input/Edit Modal-->
+
+									<!--Begin Input/Edit Modal realisasi fisik-->
+									<div class=" modal fade" id="modaleditfisik" tabindex="-1" data-bs-backdrop="static"
+										aria-labelledby="exampleModalLabel" aria-hidden="true">
+										<div
+											class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 id="accTypefisik" class="modal-title">
+														Modal Title
+													</h5>
+												</div>
+												<form action="">
+													<div class="modal-body">
+														<div class="form-group">
+															<input id="accTypesfisik" type="hidden" name="identifier"
+																class="form-control" value=" ">
+														</div>
+
+														<div class="form-group my-2">
+															<label for="name" class="form-label">Tanggal
+																Laporan</label>
+															<input class="form-control" placeholder="Pilih Tanggal"
+																id="kt_datepicker_3" name="tanggal" />
+														</div>
+														<div class="form-group my-2">
+															<label for="name" class="form-label">Deskripsi
+																Laporan</label>
+															<textarea class="form-control" aria-label="With textarea"
+																placeholder="Masukan Deskripsi" required></textarea>
+														</div>
+														<div class="form-group my-2">
+															<label for="name" class="form-label">Progress
+																Pekerjaan</label>
+															<div class="input-group mb-5">
+																<input type="text" class="form-control"
+																	placeholder="Masukan Progress Pekerjaan"
+																	aria-label="Progress Pekerjaan"
+																	aria-describedby="basic-addon2" />
+																<span class="input-group-text fs-2"
+																	id="basic-addon2">%</span>
+															</div>
+														</div>
+														<div class="form-group my-2">
+															<label for="formFile" class="form-label">Upload
+																file
+																Dokumen</label>
+															<div class="row">
+																<div class="col-3 col-sm-3 col-md-3 col-lg-2 ">
+																	<span class=" bg-primary"></span><a href="#"
+																		data-bs-toggle="modal"
+																		data-bs-target="#modalviewdokumen"
+																		data-bs-toggle="tooltip"
+																		data-bs-custom-class="tooltip-dark"
+																		data-bs-placement="left"
+																		title="Klik Untuk Preview"><i
+																			class="bi bi-file-pdf fs-4">
+																		</i>*Nama File </a>
+																</div>
+																<div
+																	class="col-9 col-sm-9 col-md-9 col-lg-10  form-check form-switch">
+																	<input class="form-check-input" type="checkbox"
+																		role="switch" id="switch-fisik">
+																	<label class="form-check-label"
+																		for="switch-fisik">Klik
+																		Untuk Mengubah
+																		File</label>
+																</div>
+															</div>
+															<div class="tambah-file-baru" style="display: none;">
+																<br>
+																<input class="form-control" type="file" id="formFile">
+															</div>
 														</div>
 													</div>
 													<div class="modal-footer">
@@ -1797,7 +2044,47 @@ License: For each use you must have a valid license purchased only from above li
 				return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
 			}
 		</script>
+		<script>
+			$(function () {
+				$("#switch-bap").change(function () {
+					if ($(this).is(":checked")) {
+						$(".tambah-file-baru").show();
 
+					} else {
+						$(".tambah-file-baru").hide();
+
+					}
+				});
+			});
+		</script>
+		<script>
+			$(function () {
+				$("#switch-bappbast").change(function () {
+					if ($(this).is(":checked")) {
+						$(".tambah-file-baru").show();
+
+					} else {
+						$(".tambah-file-baru").hide();
+
+					}
+				});
+			});
+
+		</script>
+		<script>
+			$(function () {
+				$("#switch-fisik").change(function () {
+					if ($(this).is(":checked")) {
+						$(".tambah-file-baru").show();
+
+					} else {
+						$(".tambah-file-baru").hide();
+
+					}
+				});
+			});
+
+		</script>
 		<!--end::Page Custom Javascript-->
 		<!--end::Javascript-->
 </body>
