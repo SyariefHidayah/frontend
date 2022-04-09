@@ -58,13 +58,13 @@ License: For each use you must have a valid license purchased only from above li
 
 		#legend .legend-item {
 			margin: 10px;
-			font-size: 12px;
+			font-size: 18px;
 			font-weight: bold;
 			cursor: pointer;
 		}
 
 		#legend .legend-item .legend-value {
-			font-size: 12px;
+			font-size: 13px;
 			font-weight: normal;
 			margin-left: 22px;
 		}
@@ -413,19 +413,10 @@ License: For each use you must have a valid license purchased only from above li
 						</div>
 						<!--end::Aside menu-->
 						<!--begin::Footer-->
-						<div class="aside-footer flex-column-auto pt-2 pb-5 px-5 rounded-bottom"
-							style="background-color: black;" id="kt_aside_footer">
+						<div class="aside-footer flex-column-auto rounded-bottom bg-black" id="kt_aside_footer">
 							<!--begin::Menu-->
-							<div class="d-flex justify-content-center">
-								<button type="button" class="btn btm-sm btn-icon btn-active-color-primary"
-									data-kt-menu-trigger="click" data-kt-menu-overflow="true"
-									data-kt-menu-placement="top-start" data-bs-toggle="tooltip"
-									data-bs-placement="right" data-bs-dismiss="click" title="Log Out"
-									onclick="window.location.href='../../demo6/dist/authentication/flows/basic/sign-in.html';">
-									<!--begin::Svg Icon | path: icons/duotune/general/gen008.svg-->
-									<i class="bi bi-box-arrow-right bolder fs-2tx"></i>
-									<!--end::Svg Icon-->
-								</button>
+							<div class="d-flex justify-content-center pt-5">
+								<p class="text-light"> App Version. 0.001</p>
 							</div>
 							<!--end::Menu-->
 						</div>
@@ -677,7 +668,7 @@ License: For each use you must have a valid license purchased only from above li
 																				<p style="text-align: left;">Dalam
 																					pelaksanaan Taat Administrasi,
 																					dimohon untuk melakukan update data
-																					terkait data Kontrak dan data
+																					terkait, data Kontrak dan data
 																					Realisasi Fisik setiap minggunya.
 																					Supaya data menjadi aktual dan
 																					realtime, sehingga pembina dapat
@@ -1435,7 +1426,12 @@ License: For each use you must have a valid license purchased only from above li
 		pieSeries.slices.template.strokeWidth = 2;
 		pieSeries.slices.template.strokeOpacity = 1;
 
-		chart.radius = am4core.percent(95);
+		// This creates initial animation
+		pieSeries.hiddenState.properties.opacity = 1;
+		pieSeries.hiddenState.properties.endAngle = -80;
+		pieSeries.hiddenState.properties.startAngle = -80;
+
+		chart.radius = am4core.percent(90);
 
 		// Create custom legend
 		chart.events.on("ready", function (event) {
