@@ -1656,10 +1656,32 @@ License: For each use you must have a valid license purchased only from above li
 															</div>
 														</div>
 														<div class="form-group my-2">
-															<label for="formFile" class="form-label">Upload
-																file
-																Dokumen</label>
-															<input class="form-control" type="file" id="formFile">
+															<!--begin::Input group-->
+															<div class="fv-row">
+																<!--begin::Dropzone-->
+																<div class="dropzone" id="drop-zone">
+																	<!--begin::Message-->
+																	<div class="dz-message needsclick">
+																		<!--begin::Icon-->
+																		<i
+																			class="bi bi-file-earmark-arrow-up text-primary fs-3x"></i>
+																		<!--end::Icon-->
+
+																		<!--begin::Info-->
+																		<div class="ms-4">
+																			<h3
+																				class="fs-5 fw-bolder text-gray-900 mb-1">
+																				Drop files here or click to upload.</h3>
+																			<span
+																				class="fs-7 fw-bold text-gray-400">Upload
+																				up to 10 files</span>
+																		</div>
+																		<!--end::Info-->
+																	</div>
+																</div>
+																<!--end::Dropzone-->
+															</div>
+															<!--end::Input group-->
 														</div>
 													</div>
 													<div class="modal-footer">
@@ -2158,6 +2180,49 @@ License: For each use you must have a valid license purchased only from above li
 
 					} else {
 						$(".tambah-file-baru").hide();
+
+					}
+				});
+			});
+
+		</script>
+		<script>
+			Dropzone.autoDiscover = false;
+
+			var foto_upload = new Dropzone("#drop-zone", {
+				url: "http://172.16.200.203/upload/index.php/upload/proses_upload",
+				maxFilesize: 2000,
+				method: "post",
+				acceptedFiles: "image/*, .mp4, .ts",
+				paramName: "userfile",
+				dictInvalidFileType: "Type file ini tidak dizinkan",
+				addRemoveLinks: true,
+			});
+
+
+			//Event ketika Memulai mengupload
+			foto_upload.on("sending", function (a, b, c) {
+				a.token = Math.random();
+				c.append("token_foto", a.token); //Menmpersiapkan token untuk masing masing foto
+			});
+
+
+			//Event ketika foto dihapus
+			foto_upload.on("removedfile", function (a) {
+				var token = a.token;
+				$.ajax({
+					type: "post",
+					data: {
+						token: token
+					},
+					url: "http://172.16.200.203/upload/index.php/upload/remove_foto",
+					cache: false,
+					dataType: 'json',
+					success: function () {
+						console.log("Foto terhapus");
+					},
+					error: function () {
+						console.log("Error");
 
 					}
 				});
