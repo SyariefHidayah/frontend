@@ -436,6 +436,29 @@ License: For each use you must have a valid license purchased only from above li
 													<div class="fv-row w-100 flex-md-root">
 														<!--begin::Label-->
 														<label class="d-flex align-items-center fs-6 fw-bold mb-2">
+															<span class="required">No PO CAN</span>
+														</label>
+														<!--end::Label-->
+														<!--begin::Input-->
+
+														<div class="input-group">
+															<input type="text" class="form-control form-control-solid"
+																placeholder="Masukan PO CAN" name="pocan"
+																required />
+															<span>
+																<a name="pocan" onclick=""
+																	class="btn btn-primary bg-dark"
+																	style="border-radius: 0px 5px 5px 0px;"><i
+																		class="bi bi-cloud-check fs-4"></i> Cek
+																	NO PO CAN</a>
+															</span>
+														</div>
+													</div>
+													<!--end::Input group-->
+													<!--begin::Input group-->
+													<div class="fv-row w-100 flex-md-root">
+														<!--begin::Label-->
+														<label class="d-flex align-items-center fs-6 fw-bold mb-2">
 															<span class="required">Kode RUP</span>
 														</label>
 														<!--end::Label-->
@@ -444,7 +467,9 @@ License: For each use you must have a valid license purchased only from above li
 															placeholder="Masukan Kode RUP" name="kode_rup" required />
 														<!--end::Input-->
 													</div>
-													<!--end::Input group-->
+
+												</div>
+												<div class="d-flex flex-wrap gap-5 mb-5">
 													<!--begin::Input group-->
 													<div class="fv-row w-100 flex-md-root">
 														<!--begin::Label-->
@@ -459,10 +484,7 @@ License: For each use you must have a valid license purchased only from above li
 														</select>
 														<!--end::Input-->
 													</div>
-
-												</div>
-												<div class="d-flex flex-wrap gap-5 mb-5">
-													<!--begin::Input group-->
+													<!--end::Input group-->
 													<div class="fv-row w-100 flex-md-root">
 														<!--begin::Label-->
 														<label class="d-flex align-items-center fs-6 fw-bold mb-2">
@@ -475,7 +497,9 @@ License: For each use you must have a valid license purchased only from above li
 															required />
 														<!--end::Input-->
 													</div>
-													<!--end::Input group-->
+												</div>
+												<div class="d-flex flex-wrap gap-5 mb-5">
+													<!--begin::Input group-->
 													<div class="fv-row w-100 flex-md-root">
 														<!--begin::Label-->
 														<label class="d-flex align-items-center fs-6 fw-bold mb-2">
@@ -488,8 +512,7 @@ License: For each use you must have a valid license purchased only from above li
 															name="tanggal_kontrak" />
 														<!--end::Input-->
 													</div>
-												</div>
-												<div class="d-flex flex-column mb-8 fv-row">
+													<!--end::Input group-->
 													<div class="fv-row w-100 flex-md-root">
 														<!--begin::Label-->
 														<label class="d-flex align-items-center fs-6 fw-bold mb-2">
@@ -503,7 +526,6 @@ License: For each use you must have a valid license purchased only from above li
 														</div>
 													</div>
 												</div>
-
 												<div class="d-flex flex-wrap gap-5 mb-5">
 													<!--begin::Input group-->
 													<div class="fv-row w-100 flex-md-root">
@@ -568,142 +590,7 @@ License: For each use you must have a valid license purchased only from above li
 														<!--end::Input-->
 													</div>
 												</div>
-												<div class="separator my-5"></div>
-												<div>
-													<label class="d-flex align-items-center fs-6 fw-bold mb-2">
-														<span class="required">Kepala Satuan Kerja</span>
-													</label>
-													<div class="separator separator-dashed my-3"></div>
-												</div>
-												<div class="d-flex flex-wrap gap-5 mb-5">
-													<!--begin::Input group-->
-													<div class="fv-row w-100 flex-md-root">
-														<!--begin::Label-->
-														<label class="d-flex align-items-center fs-6 fw-bold mb-2">
-															<span class="required">NIP</span>
-														</label>
-														<!--end::Label-->
-														<!--begin::Input-->
-
-														<div class="input-group">
-															<input type="text" class="form-control form-control-solid"
-																placeholder="Masukan NIP" name="anggota[100][nip]"
-																required />
-															<span>
-																<a name="anggota[100][nip]" onclick="sikep(this)"
-																	class="btn btn-primary bg-dark"
-																	style="border-radius: 0px 5px 5px 0px;"><i
-																		class="bi bi-cloud-check fs-4"></i> Cek
-																	NIP</a>
-															</span>
-														</div>
-														<!--end::Input-->
-													</div>
-													<!--end::Input group-->
-													<!--begin::Input group-->
-													<div class="fv-row w-100 flex-md-root">
-														<!--begin::Label-->
-														<label class="d-flex align-items-center fs-6 fw-bold mb-2">
-															<span class="required">Nama </span>
-														</label>
-														<!--end::Label-->
-														<!--begin::Input-->
-														<input type="text" class="form-control form-control-solid"
-															placeholder="Masukan Nama" name="anggota[100][nama]"
-															required />
-														<!--end::Input-->
-													</div>
-												</div>
-												<div>
-													<label class="d-flex align-items-center fs-6 fw-bold mb-2">
-														<span class="required">Sekretaris Satuan Kerja</span>
-													</label>
-													<div class="separator separator-dashed my-3"></div>
-												</div>
-												<div class="d-flex flex-wrap gap-5 mb-5">
-													<!--begin::Input group-->
-													<div class="fv-row w-100 flex-md-root">
-														<!--begin::Label-->
-														<label class="d-flex align-items-center fs-6 fw-bold mb-2">
-															<span class="required">NIP</span>
-														</label>
-														<!--end::Label-->
-														<!--begin::Input-->
-
-														<div class="input-group">
-															<input type="text" class="form-control form-control-solid"
-																placeholder="Masukan NIP" name="anggota[100][nip]"
-																required />
-															<span>
-																<a name="anggota[100][nip]" onclick="sikep(this)"
-																	class="btn btn-primary bg-dark"
-																	style="border-radius: 0px 5px 5px 0px;"><i
-																		class="bi bi-cloud-check fs-4"></i> Cek
-																	NIP</a>
-															</span>
-														</div>
-														<!--end::Input-->
-													</div>
-													<!--end::Input group-->
-													<!--begin::Input group-->
-													<div class="fv-row w-100 flex-md-root">
-														<!--begin::Label-->
-														<label class="d-flex align-items-center fs-6 fw-bold mb-2">
-															<span class="required">Nama </span>
-														</label>
-														<!--end::Label-->
-														<!--begin::Input-->
-														<input type="text" class="form-control form-control-solid"
-															placeholder="Masukan Nama" name="anggota[100][nama]"
-															required />
-														<!--end::Input-->
-													</div>
-												</div>
-												<div>
-													<label class="d-flex align-items-center fs-6 fw-bold mb-2">
-														<span class="required">Pejabat Pembuat Komitmen</span>
-													</label>
-													<div class="separator separator-dashed my-3"></div>
-												</div>
-												<div class="d-flex flex-wrap gap-5 mb-5">
-													<!--begin::Input group-->
-													<div class="fv-row w-100 flex-md-root">
-														<!--begin::Label-->
-														<label class="d-flex align-items-center fs-6 fw-bold mb-2">
-															<span class="required">NIP</span>
-														</label>
-														<!--end::Label-->
-														<!--begin::Input-->
-
-														<div class="input-group">
-															<input type="text" class="form-control form-control-solid"
-																placeholder="Masukan NIP" name="anggota[100][nip]"
-																required />
-															<span>
-																<a name="anggota[100][nip]" onclick="sikep(this)"
-																	class="btn btn-primary bg-dark"
-																	style="border-radius: 0px 5px 5px 0px;"><i
-																		class="bi bi-cloud-check fs-4"></i> Cek
-																	NIP</a>
-															</span>
-														</div>
-														<!--end::Input-->
-													</div>
-													<!--end::Input group-->
-													<!--begin::Input group-->
-													<div class="fv-row w-100 flex-md-root">
-														<!--begin::Label-->
-														<label class="d-flex align-items-center fs-6 fw-bold mb-2">
-															<span class="required">Nama </span>
-														</label>
-														<!--end::Label-->
-														<!--begin::Input-->
-														<input type="text" class="form-control form-control-solid"
-															placeholder="Masukan Nama" name="anggota[100][nama]"
-															required />
-														<!--end::Input-->
-													</div>
-												</div>
+												
 											</div>
 										</div>
 										<!--end::row-->
