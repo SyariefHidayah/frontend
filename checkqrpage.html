@@ -40,28 +40,59 @@ License: For each use you must have a valid license purchased only from above li
 	<!--end::Global Stylesheets Bundle-->
 
 	<style>
-		#squaresuccess {
+		@media screen and (min-width: 601px) {
+			div.squarefail {
+				font-size: 50px;
+			}
+
+			div.squaresuccess {
+				font-size: 50px;
+			}
+
+			div.status {
+				font-size: 30px;
+			}
+		}
+
+		@media screen and (max-width: 600px) {
+			div.squarefail {
+				font-size: 30px;
+				margin-bottom: -80px;
+			}
+
+			div.squaresuccess {
+				font-size: 30px;
+			}
+
+			div.status {
+				font-size: 20px;
+			}
+		}
+
+		.squaresuccess {
 			margin-top: 10px;
 			background: rgb(54, 108, 78);
 			background: linear-gradient(0deg, rgba(54, 108, 78, 1) 0%, rgba(145, 190, 95, 1) 100%);
-			padding: 100px;
+			padding: 100px 0;
+			text-align: center;
 			font-family: 'Poppins', sans-serif;
 			height: 250px;
 			font-size: xx-large;
 			font-weight: 600;
-			text-align: center;
+
 		}
 
-		#squarefail {
+		.squarefail {
 			margin-top: 10px;
 			background: rgb(115, 27, 9);
 			background: linear-gradient(0deg, rgba(115, 27, 9, 1) 0%, rgba(176, 12, 12, 1) 100%);
-			padding: 100px;
+			padding: 100px 0;
+			text-align: center;
 			font-family: 'Poppins', sans-serif;
 			height: 250px;
 			font-size: xx-large;
 			font-weight: 600;
-			text-align: center;
+
 		}
 
 		#table1 {
@@ -77,12 +108,16 @@ License: For each use you must have a valid license purchased only from above li
 <body>
 
 	<div class="container">
-		<div class="row justify-content-center">
+		<div class="row justify-content-center mb-15">
 			<!-- Jika success maka id squaresuccess kalo fail maka id square fail-->
-			<div id="squarefail" class="col-12 text-light">
+			<div class="squarefail text-light">
 				Qr Document Verification
-				<div class="card mt-10">
-					<div class="card-body shadow-lg " style="border-radius: 0px;">
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-12 col-md-10 col-lg-10">
+				<div class="card ">
+					<div class="card-body shadow-lg" style="border-radius: 0px;">
 
 						<!-- <div class="card px-5">
 							<div class="card-body shadow-lg text-dark">
@@ -118,13 +153,15 @@ License: For each use you must have a valid license purchased only from above li
 							</table>
 						</div>
 
-						<div class="row fw-bolder mt-5 ">
-							<p class="text-center text-black">QR Code Tidak Valid / Document Belum Terverifikasi</p>
+						<div class="row status fw-bolder mt-5 ">
+							<p class="text-center text-black">QR Code Tidak Valid / Document
+								Belum Terverifikasi</p>
 						</div>
 
 					</div>
 				</div>
 			</div>
+
 		</div>
 	</div>
 </body>
