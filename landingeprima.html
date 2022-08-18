@@ -38,8 +38,22 @@ License: For each use you must have a valid license purchased only from above li
 	<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
 	<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 	<!--end::Global Stylesheets Bundle-->
+	<script src="https://www.amcharts.com/lib/4/core.js"></script>
+	<script src="https://www.amcharts.com/lib/4/charts.js"></script>
+	<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
 
 	<style>
+		#barchartdiv {
+			width: 100%;
+			height: 500px;
+		}
+
+		#chartdiv {
+			width: 100%;
+			height: 500px;
+		}
+
+
 		html {
 			scroll-behavior: smooth;
 			;
@@ -130,8 +144,18 @@ License: For each use you must have a valid license purchased only from above li
 		}
 
 		.judul {
-			color: white;
-			font-size: 10vh;
+			color: black;
+			font-size: 7vw;
+			text-align: center;
+		}
+
+		.subjudul1 {
+			font-size: 2vw;
+			text-align: center;
+		}
+
+		.subjudul2 {
+			font-size: 2vw;
 			text-align: center;
 		}
 
@@ -141,7 +165,7 @@ License: For each use you must have a valid license purchased only from above li
 
 
 			/* Set a specific height */
-			min-height: 1200px;
+			min-height: 1000px;
 
 			/* Create the parallax scrolling effect */
 			background-attachment: fixed;
@@ -169,19 +193,13 @@ License: For each use you must have a valid license purchased only from above li
 		}
 
 		.konten {
-			background-color: #881812;
-			padding: 150px;
-			text-align: center;
-			font-size: 2vw;
-			min-height: 900px;
+			background-color: #fac05b;
+			min-height: 700px;
 		}
 
 		.konten2 {
-			background-color: #fbc452;
-			padding: 150px;
-			text-align: center;
-			font-size: 2vw;
-			min-height: 900px;
+			background-color: #881812;
+			min-height: 700px;
 		}
 
 		video {
@@ -251,35 +269,68 @@ License: For each use you must have a valid license purchased only from above li
 	<main>
 
 		<div class="row parallax1 text-light">
-			<p class="judul">Selamat Datang</p>
-			<h1 style="text-align:center;">Di</h1>
-			<p class="judul">"Z Develop School"</p>
+			<!-- <p class="judul">Selamat</p>
+			<p class="judul text-white">Datang</p> -->
 		</div>
+		<div class="row text-light konten2" id="grafik">
+			<p class="subjudul1 pt-15 text-white">Grafik Nasional</p>
+			<div class="row p-10">
+				<div class="col col-sm-12 col-md-12 col-lg-6">
+					<div class="card shadow-lg rounded-0">
+						<!--begin::Header-->
+						<div class="card-header rounded-0 ribbon ribbon-end ribbon-clip bg-black">
 
-		<div class="row text-light" id="testimoni">
-			<div class="col col-12 konten">
-				<p class="mb-15">Testimoni</p>
+							<div class="card-title text-light fs-3 fw-bolder">Nilai Anggaran Nasional
+							</div>
+						</div>
+						<!--end::Header-->
+						<!--begin::Body-->
+						<div class="card-body px-0 border ">
+							<div id="barchartdiv" class="p-4"></div>
+						</div>
+						<!--end: Card Body-->
+					</div>
+				</div>
+				<div class="col col-sm-12 col-md-12 col-lg-6">
+					<div class="card shadow-lg rounded-0">
+						<!--begin::Header-->
+						<div class="card-header rounded-0 ribbon ribbon-end ribbon-clip bg-black">
+
+							<div class="card-title text-light fs-3 fw-bolder">Jumlah Paket Nasional
+							</div>
+						</div>
+						<!--end::Header-->
+						<!--begin::Body-->
+						<div class="card-body px-0 border ">
+							<div id="chartdiv" class="p-4"></div>
+						</div>
+						<!--end: Card Body-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="row parallax2" id="kursus">
+			<p class="judul">"Sukses itu dimulai dengan Tekad Yang kuat"</p>
+		</div> -->
+		<div class="row text-light konten" id="testimoni">
+			<p class="subjudul2 pt-15 text-black">Testimoni</p>
+			<div class="row p-20">
 				<video controls>
 					<source src="mov_bbb.mp4" type="video/mp4">
 					<source src="mov_bbb.ogg" type="video/ogg">
 					Your browser does not support HTML5 video.
 				</video>
+
 			</div>
+
+
+
 		</div>
-		<div class="row parallax2" id="kursus">
-			<p class="judul">"Sukses itu dimulai dengan Tekad Yang kuat"</p>
 		</div>
-		<div class="row text-light" id="grafik">
-			<div class="col-12 konten2">
-				"Z_Develop School adalah tempat untuk kursus menjadi programmer sampai mahir , disini siapa saja bisa
-				jadi
-				programmer
-				walaupun latar belakang bukan seorang IT"
-			</div>
-		</div>
+
 		<div class="row footer text-light">
-			<div class="col col-3">&#169; 2022 Mahkamah Agung RI. All Right Reserved.</div>
-			<div class="col col-6"></div>
+			<div class="col col-3"></div>
+			<div class="col col-6 text-center"> &#169; 2022 Mahkamah Agung RI. All Right Reserved.</div>
 			<div class="col col-3"></div>
 		</div>
 
@@ -310,9 +361,183 @@ License: For each use you must have a valid license purchased only from above li
 	<script src="assets/js/scripts.bundle.js"></script>
 	<!--end::Global Javascript Bundle-->
 	<!--begin::Page Custom Javascript(used by this page)-->
-	<script src="assets/js/custom/authentication/sign-in/general.js"></script>
+	<script>
+		am4core.ready(function () {
+
+			// Themes begin
+			am4core.useTheme(am4themes_animated);
+			// Themes end
+
+
+
+			var chart = am4core.create('barchartdiv', am4charts.XYChart)
+			chart.colors.step = 1;
+			chart.colors.list = [
+				am4core.color("#FAC05B"),
+				am4core.color("#C8375C"),
+				am4core.color("#36366C"),
+
+			];
+
+			chart.numberFormatter.numberFormat = {
+				"style": "currency",
+				"currency": "IDR"
+			}
+			chart.legend = new am4charts.Legend()
+			chart.legend.position = 'top'
+			chart.legend.paddingBottom = 20
+			chart.legend.labels.template.maxWidth = 95
+
+			var xAxis = chart.xAxes.push(new am4charts.CategoryAxis())
+			xAxis.dataFields.category = 'category'
+			xAxis.renderer.cellStartLocation = 0.1
+			xAxis.renderer.cellEndLocation = 0.9
+			xAxis.renderer.grid.template.location = 0;
+
+			var yAxis = chart.yAxes.push(new am4charts.ValueAxis());
+			yAxis.min = 0;
+
+			function createSeries(value, name) {
+				var series = chart.series.push(new am4charts.ColumnSeries())
+				series.dataFields.valueY = value
+				series.dataFields.categoryX = 'category'
+				series.name = name
+				series.columns.template.tooltipText = "{name}: [bold]{valueY}[/]";
+				series.columns.template.strokeWidth = 0;
+
+
+
+				series.events.on("hidden", arrangeColumns);
+				series.events.on("shown", arrangeColumns);
+
+				// var bullet = series.bullets.push(new am4charts.LabelBullet())
+				// bullet.interactionsEnabled = false
+				// bullet.dy = 30;
+				// bullet.label.text = '{valueY}'
+				// bullet.label.fill = am4core.color('#ffffff')
+
+				return series;
+			}
+
+			chart.data = [
+				{
+					category: 'Pekerjaan Konstruksi',
+					pagu: 1300000000,
+					kontrak: 1500000000,
+					realisasi: 1200000000
+				},
+				{
+					category: 'Pengadaan Barang',
+					pagu: 1300000000,
+					kontrak: 1500000000,
+					realisasi: 1200000000
+				},
+				{
+					category: 'Jasa Konsultasi',
+					pagu: 1300000000,
+					kontrak: 1500000000,
+					realisasi: 1200000000
+				},
+				{
+					category: 'Jasa Lainnya',
+					pagu: 1300000000,
+					kontrak: 1500000000,
+					realisasi: 1200000000
+				}
+			]
+
+
+			createSeries('pagu', 'Pagu Anggaran');
+			createSeries('kontrak', 'Nilai Kontrak');
+			createSeries('realisasi', 'Realisasi');
+
+			function arrangeColumns() {
+
+				var series = chart.series.getIndex(0);
+
+				var w = 1 - xAxis.renderer.cellStartLocation - (1 - xAxis.renderer.cellEndLocation);
+				if (series.dataItems.length > 1) {
+					var x0 = xAxis.getX(series.dataItems.getIndex(0), "categoryX");
+					var x1 = xAxis.getX(series.dataItems.getIndex(1), "categoryX");
+					var delta = ((x1 - x0) / chart.series.length) * w;
+					if (am4core.isNumber(delta)) {
+						var middle = chart.series.length / 2;
+
+						var newIndex = 0;
+						chart.series.each(function (series) {
+							if (!series.isHidden && !series.isHiding) {
+								series.dummyData = newIndex;
+								newIndex++;
+							}
+							else {
+								series.dummyData = chart.series.indexOf(series);
+							}
+						})
+						var visibleCount = newIndex;
+						var newMiddle = visibleCount / 2;
+
+						chart.series.each(function (series) {
+							var trueIndex = chart.series.indexOf(series);
+							var newIndex = series.dummyData;
+
+							var dx = (newIndex - trueIndex + middle - newMiddle) * delta
+
+							series.animate({ property: "dx", to: dx }, series.interpolationDuration, series.interpolationEasing);
+							series.bulletsContainer.animate({ property: "dx", to: dx }, series.interpolationDuration, series.interpolationEasing);
+						})
+					}
+				}
+			}
+
+		}); // end am4core.ready()
+	</script>
 	<!--end::Page Custom Javascript-->
+
+	<script>
+		am4core.useTheme(am4themes_animated);
+
+		// Create chart instance
+		var chart = am4core.create('chartdiv', am4charts.XYChart)
+		chart.colors.step = 1;
+		chart.colors.list = [
+			am4core.color("#36366C"),
+
+		];
+
+		// Add data
+		chart.data = [
+			{
+				"category": "Jasa Lainnya",
+				"value": 102
+			}, {
+				"category": "Pengadaan Barang",
+				"value": 76
+			}, {
+				"category": "Pekerjaan Konstruksi",
+				"value": 400
+			}, {
+				"category": "Jasa Konsultasi",
+				"value": 97
+			}];
+
+		var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+		categoryAxis.dataFields.category = "category";
+		categoryAxis.renderer.grid.template.location = 0;
+
+		var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
+
+		var series = chart.series.push(new am4charts.ColumnSeries());
+		series.dataFields.valueX = "value";
+		series.dataFields.categoryY = "category";
+
+		var valueLabel = series.bullets.push(new am4charts.LabelBullet());
+		valueLabel.label.text = "{value} Paket";
+		valueLabel.label.fontSize = 20;
+		valueLabel.label.horizontalCenter = "right";
+		valueLabel.label.fill = am4core.color("#fff");
+	</script>
 	<!--end::Javascript-->
+
 </body>
 <!--end::Body-->
 
