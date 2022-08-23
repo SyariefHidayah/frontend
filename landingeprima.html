@@ -43,6 +43,11 @@ License: For each use you must have a valid license purchased only from above li
 	<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
 
 	<style>
+		video {
+			max-width: 100%;
+			height: auto;
+		}
+
 		#barchartdiv {
 			width: 100%;
 			height: 500px;
@@ -59,7 +64,7 @@ License: For each use you must have a valid license purchased only from above li
 			;
 		}
 
-		@media (max-width: 700px) {
+		@media (max-width: 1000px) {
 			section {
 				-webkit-flex-direction: column;
 				flex-direction: column;
@@ -69,21 +74,38 @@ License: For each use you must have a valid license purchased only from above li
 				font-size: 2vw;
 			}
 
+
+			div.konten {
+				font-size: 6vw;
+				background-color: #fac05b;
+				min-height: auto;
+				padding: 0px 0px 20px 0px;
+			}
+
+			div.konten2 {
+				font-size: 6vw;
+				background-color: #881812;
+				min-height: 700px;
+			}
+
 			div.parallax1 {
 				min-height: 50px;
 			}
 
-			div.konten {
-				padding: 50px 50px 50px 50px;
-				font-size: 4vw;
-				min-height: auto;
+			div.videosesma {
+				padding: 0px;
+				margin: 0px;
+				text-align: justify;
 			}
 
-			div.konten2 {
-				padding: 50px 50px 50px 50px;
-				font-size: 4vw;
-				min-height: auto;
+			div.kontensesma {
+				padding: 30px;
+				margin: 0px;
+				text-align: justify;
 			}
+
+
+
 		}
 
 		.navbar .navbar-nav .nav-link {
@@ -149,19 +171,11 @@ License: For each use you must have a valid license purchased only from above li
 			text-align: center;
 		}
 
-		.subjudul1 {
-			font-size: 2vw;
-			text-align: center;
-		}
 
-		.subjudul2 {
-			font-size: 2vw;
-			text-align: center;
-		}
 
 		.parallax1 {
 			/* The image used */
-			background-image: url("/eprocurement/assets/IMG_8133\ -\ Copy.JPG");
+			background-image: url("assets/parallax1.png");
 
 
 			/* Set a specific height */
@@ -173,7 +187,7 @@ License: For each use you must have a valid license purchased only from above li
 			background-repeat: no-repeat;
 			background-size: cover;
 			padding: 200px 0;
-			text-align: center;
+
 		}
 
 		.parallax2 {
@@ -189,23 +203,39 @@ License: For each use you must have a valid license purchased only from above li
 			background-repeat: no-repeat;
 			background-size: cover;
 			padding: 200px 0;
-			text-align: center;
+
+		}
+
+		.videosesma {
+			padding: 100px 0px 100px 100px;
+			margin: 0px;
+			text-align: justify;
+		}
+
+		.kontensesma {
+			padding: 100px 100px 100px 0px;
+			margin: 0px;
+			text-align: justify;
 		}
 
 		.konten {
+			font-size: 2vw;
 			background-color: #fac05b;
 			min-height: 700px;
+			padding: 90px 250px 100px 250px;
 		}
 
 		.konten2 {
+			font-size: 2vw;
 			background-color: #881812;
 			min-height: 700px;
+			padding: 90px 0px 100px 0px;
 		}
 
-		video {
-			width: 85%;
-			height: auto;
+		.grafik {
+			font-size: 1rem;
 		}
+
 
 		.footer {
 			background-color: #262626;
@@ -268,14 +298,54 @@ License: For each use you must have a valid license purchased only from above li
 	<!-- area main konten -->
 	<main>
 
-		<div class="row parallax1 text-light">
-			<!-- <p class="judul">Selamat</p>
-			<p class="judul text-white">Datang</p> -->
+		<div class="row parallax1 text-black">
+			<div class="row g-0">
+				<div class="videosesma col-12 col-sm-12 col-md-6 bg-transparent">
+					<div class="card bg-transparent">
+						<div class="card-body">
+							<video width="900" controls>
+								<source src="mov_bbb.mp4" type="video/mp4">
+								<source src="mov_bbb.ogg" type="video/ogg">
+								Your browser does not support HTML5 video.
+							</video>
+						</div>
+					</div>
+				</div>
+				<div class="kontensesma col-12 col-sm-12 col-md-6 bg-transparent">
+					<div class="card bg-light">
+						<div class="card-body text-black">
+							<p class="fs-1 fw-bold">
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi dolores ducimus
+								corporis,
+								consequuntur, quam ipsa eaque sint dignissimos fuga corrupti sunt nisi necessitatibus
+								magnam
+								illo
+								itaque quae iusto libero. Aspernatur.
+							</p>
+							<p class="fs-1 fw-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Voluptatem cumque
+								vero
+								laboriosam dolore ea quod eos quas ab, nulla veniam architecto nemo unde commodi
+								incidunt labore
+								deleniti doloremque tempore magni?
+							</p>
+							<p class="fs-1 fw-bold">
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, accusantium
+								distinctio ipsam
+								fuga cum provident laborum suscipit debitis a architecto hic quasi ipsa beatae
+								dignissimos aut,
+								quisquam veniam eos officia?
+							</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
 		</div>
 		<div class="row text-light konten2" id="grafik">
-			<p class="subjudul1 pt-15 text-white">Grafik Nasional</p>
-			<div class="row p-10">
-				<div class="col col-sm-12 col-md-12 col-lg-6">
+			<p class="text-center pt-15 text-white">Grafik Nasional</p>
+			<div class="grafik row p-10">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-6">
 					<div class="card shadow-lg rounded-0">
 						<!--begin::Header-->
 						<div class="card-header rounded-0 ribbon ribbon-end ribbon-clip bg-black">
@@ -291,7 +361,7 @@ License: For each use you must have a valid license purchased only from above li
 						<!--end: Card Body-->
 					</div>
 				</div>
-				<div class="col col-sm-12 col-md-12 col-lg-6">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-6">
 					<div class="card shadow-lg rounded-0">
 						<!--begin::Header-->
 						<div class="card-header rounded-0 ribbon ribbon-end ribbon-clip bg-black">
@@ -313,20 +383,14 @@ License: For each use you must have a valid license purchased only from above li
 			<p class="judul">"Sukses itu dimulai dengan Tekad Yang kuat"</p>
 		</div> -->
 		<div class="row text-light konten" id="testimoni">
-			<p class="subjudul2 pt-15 text-black">Testimoni</p>
-			<div class="row p-20">
-				<video controls>
-					<source src="mov_bbb.mp4" type="video/mp4">
-					<source src="mov_bbb.ogg" type="video/ogg">
-					Your browser does not support HTML5 video.
-				</video>
-
-			</div>
-
-
-
+			<p class="text-center pt-15 text-black">Testimoni</p>
+			<video width="400" controls>
+				<source src="mov_bbb.mp4" type="video/mp4">
+				<source src="mov_bbb.ogg" type="video/ogg">
+				Your browser does not support HTML5 video.
+			</video>
 		</div>
-		</div>
+
 
 		<div class="row footer text-light">
 			<div class="col col-3"></div>
